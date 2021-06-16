@@ -1,5 +1,7 @@
 {% from 'bootstrap/utils.html' import render_messages %}
 <!doctype html>
+
+
 <html lang="en">
 
 {% with messages = get_flashed_messages(with_categories=true) %}
@@ -62,18 +64,27 @@
 
                 <div class="collapse navbar-collapse" id="main-navbar">
                     <ul class="nav navbar-nav navbar-left">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="DataDropdown"
-                               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                               Data maintenance
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="DataDropdown">
-                                <a class="dropdown-item" href="{{ url_for('admin.list_subject_groups') }}">
-                                    Subject groups
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
+   {% if current_user.is_authenticated %}
+       <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" href="#" id="DataDropdown"
+              role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Data maintenance
+           </a>
+           <div class="dropdown-menu" aria-labelledby="DataDropdown">
+               <a class="dropdown-item" href="{{ url_for('admin.list_staff') }}">
+                   Staff
+               </a>
+               <a class="dropdown-item" href="{{ url_for('admin.list_subject_groups') }}">
+                   Subject groups
+               </a>
+           </div>
+       </li>
+       <li class="nav-link"><a href="{{ url_for('auth.password') }}">Change password</a></li>
+       <li class="nav-link"><a href="{{ url_for('auth.logout') }}">Logout</a></li>
+   {% else %}
+       <li class="nav-link"><a href="{{ url_for('auth.login') }}">Login</a></li>
+   {% endif %}
+</ul>
                 </div>
             </div>
         </nav>

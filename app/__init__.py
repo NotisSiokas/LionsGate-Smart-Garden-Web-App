@@ -6,12 +6,17 @@ from flask_login import LoginManager
 
 
 
+
+
+
+
 # local imports
 from config import app_config
 
 
 
 db = SQLAlchemy()
+
 login_manager = LoginManager()
 
 
@@ -31,6 +36,9 @@ def create_app(config_name):
 
     from .admin import admin as admin_blueprint
     app.register_blueprint(admin_blueprint)
+
+    from .auth import auth as auth_blueprint
+    app.register_blueprint(auth_blueprint)
 
     @app.errorhandler(403)
     def forbidden(error):

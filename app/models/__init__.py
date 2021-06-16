@@ -1,2 +1,2 @@
-from .subject_group import *
+from .subject_groups import *
 from .staff import *
