@@ -4,16 +4,8 @@ from flask_migrate import Migrate
 from flask_bootstrap import Bootstrap
 from flask_login import LoginManager
 
-
-
-
-
-
-
 # local imports
 from config import app_config
-
-
 
 db = SQLAlchemy()
 
@@ -25,7 +17,9 @@ def create_app(config_name):
     app.config.from_object(app_config[config_name])
     app.config.from_pyfile('config.py')
     db.init_app(app)
+
     migrate = Migrate(app, db)
+    from app import models
 
     login_manager.init_app(app)
     login_manager.login_message = "You must be logged in to access this page."
