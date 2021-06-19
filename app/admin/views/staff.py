@@ -4,11 +4,11 @@ from sqlalchemy.exc import SQLAlchemyError
 from app.admin import admin
 from app import db
 from app.admin.forms.staff import *
-from flask_login import login_required
+
 
 
 @admin.route('/staff', methods=['GET'])
-@login_required
+
 def list_staff():
     staff = Staff.query.all()
     return render_template('admin/staff.html',
@@ -17,7 +17,7 @@ def list_staff():
 
 
 @admin.route('/staff/add', methods=['GET', 'POST'])
-@login_required
+
 def add_staff():
     form = StaffForm()
     if form.validate_on_submit():
@@ -48,7 +48,7 @@ def add_staff():
 
 
 @admin.route('/staff/delete/<int:id>', methods=['GET', 'POST'])
-@login_required
+
 def delete_staff(id):
     staff = Staff.query.get_or_404(id)
     db.session.delete(staff)
@@ -66,7 +66,7 @@ def delete_staff(id):
 
 
 @admin.route('/staff/edit/<int:id>', methods=['GET', 'POST'])
-@login_required
+
 def edit_staff(id):
     staff = Staff.query.get_or_404(id)
     form = StaffForm(
