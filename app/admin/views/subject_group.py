@@ -8,7 +8,7 @@ from flask_login import login_required
 
 
 @admin.route('/subject_groups', methods=['GET'])
-
+@login_required
 def list_subject_groups():
     subject_groups = SubjectGroup.query.all()
     return render_template('admin/subject_groups.html',
@@ -17,7 +17,7 @@ def list_subject_groups():
 
 
 @admin.route('/subject_groups/add', methods=['GET', 'POST'])
-
+@login_required
 def add_subject_group():
     form = SubjectGroupForm()
     if form.validate_on_submit():
@@ -42,7 +42,7 @@ def add_subject_group():
 
 
 @admin.route('/subject_group/delete/<int:id>', methods=['GET', 'POST'])
-
+@login_required
 def delete_subject_group(id):
     subject_group = SubjectGroup.query.get_or_404(id)
     db.session.delete(subject_group)
@@ -52,7 +52,7 @@ def delete_subject_group(id):
 
 
 @admin.route('/subject_group/edit/<int:id>', methods=['GET', 'POST'])
-
+@login_required
 def edit_subject_group(id):
     subject_group = SubjectGroup.query.get_or_404(id)
     form = SubjectGroupForm(obj=subject_group)

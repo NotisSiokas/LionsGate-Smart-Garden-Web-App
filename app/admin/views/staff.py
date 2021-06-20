@@ -8,7 +8,6 @@ from app.admin.forms.staff import *
 
 
 @admin.route('/staff', methods=['GET'])
-
 def list_staff():
     staff = Staff.query.all()
     return render_template('admin/staff.html',
@@ -17,7 +16,6 @@ def list_staff():
 
 
 @admin.route('/staff/add', methods=['GET', 'POST'])
-
 def add_staff():
     form = StaffForm()
     if form.validate_on_submit():
@@ -48,7 +46,6 @@ def add_staff():
 
 
 @admin.route('/staff/delete/<int:id>', methods=['GET', 'POST'])
-
 def delete_staff(id):
     staff = Staff.query.get_or_404(id)
     db.session.delete(staff)
@@ -66,7 +63,6 @@ def delete_staff(id):
 
 
 @admin.route('/staff/edit/<int:id>', methods=['GET', 'POST'])
-
 def edit_staff(id):
     staff = Staff.query.get_or_404(id)
     form = StaffForm(
