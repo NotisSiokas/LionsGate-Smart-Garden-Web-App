@@ -5,8 +5,9 @@ from sqlalchemy.testing import db
 
 from app.auth import auth
 from app.auth.forms.login import *
-from app.auth.forms.password import PasswordForm
 from app.models import Staff
+from app import db
+from app.auth.forms.password import PasswordForm
 
 
 @auth.route('/login', methods=['GET', 'POST'])

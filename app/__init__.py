@@ -3,6 +3,8 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_bootstrap import Bootstrap
 from flask_login import LoginManager
+import logging
+
 
 # local imports
 from config import app_config
@@ -24,6 +26,10 @@ def create_app(config_name):
     login_manager.init_app(app)
     login_manager.login_message = "You must be logged in to access this page."
     login_manager.login_view = "auth.login"
+
+    logging.basicConfig(filename='<FlaskApp.log>',
+                        level=app.config['LOGLEVEL'],
+                        format='%(asctime)s %(levelname)s %(name)s %(threadName)s: %(message)s')
 
     from .public import public as public_blueprint
     app.register_blueprint(public_blueprint)
@@ -60,6 +66,9 @@ def create_app(config_name):
             errno=500,
             message="The server encountered an internal error. That's all we know."
         ), 500
+
+
+
 
     Bootstrap(app)
 
