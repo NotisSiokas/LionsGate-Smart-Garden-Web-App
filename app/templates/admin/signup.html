@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="d-flex justify-content-center">
+        <div class="flex-column">
+            <h1>{{ title }}</h1>
+            {% if rowdata %}
+              <div>
+                <table class="table table-striped table-bordered fixed-header">
+                  <thead>
+                    <tr>
+                      <th> First name </th>
+                      <th> Last name </th>
+                      <th> Email </th>
+                      <th> Subject group </th>
+                      <th> Actions </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% for row in rowdata %}
+                    <tr>
+                      <td> {{ row.first_name }} </td>
+                      <td> {{ row.last_name }} </td>
+                      <td> {{ row.email }} </td>
+                      <td> {{ row.subject_group.name }} </td>
+                      <td>
+                          <a title="Edit" href="{{ url_for('admin.edit_staff', id=row.id) }}">
+                              <i class="bi-pencil"></i>
+                          </a>
+                          <a title="Delete" href="{{ url_for('admin.delete_staff', id=row.id) }}">
+                              <i class="bi-trash"></i>
+                          </a>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            {% else %}
+              <div>
+                <h3> No data found. </h3>
+              </div>
+            {% endif %}
+            <div>
+                <a class="btn btn-primary" href="{{ url_for('admin.add_staff') }}">New</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
