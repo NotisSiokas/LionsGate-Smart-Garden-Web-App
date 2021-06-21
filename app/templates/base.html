@@ -48,7 +48,8 @@
                 </a>
                 <div class="collapse navbar-collapse" id="main-navbar">
                     <ul class="nav navbar-nav navbar-left">
-                        <li class="nav-item dropdown">
+                        {% if current_user.is_authenticated %}
+                            <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="DataDropdown"
                             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Data maintenance
@@ -62,11 +63,11 @@
                                 </a>
                             </div>
                         </li>
-                        {% if current_user.is_authenticated %}
                             <li class="nav-link"><a href="{{ url_for('auth.password') }}">Change password</a></li>
                             <li class="nav-link"><a href="{{ url_for('auth.logout') }}">Logout</a></li>
                         {% else %}
                             <li class="nav-link"><a href="{{ url_for('auth.login') }}">Login</a></li>
+                            <li class="nav-link"><a href="{{ url_for('auth.signup') }}">Sign Up</a></li>
                         {% endif %}
                         </ul>
                 </div>
