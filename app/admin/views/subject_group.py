@@ -17,7 +17,7 @@ def list_subject_groups():
 
 
 @admin.route('/subject_groups/add', methods=['GET', 'POST'])
-#@login_required
+@login_required
 def add_subject_group():
     form = SubjectGroupForm()
     if form.validate_on_submit():
