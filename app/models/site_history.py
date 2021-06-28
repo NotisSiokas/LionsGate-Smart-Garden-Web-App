@@ -4,10 +4,8 @@ from app import db
 class SiteHistory(db.Model):
     __tablename__ = 'site_history'
 
-    id =
-    FK1 =
+    id = db.Column(db.Integer, primary_key=True, nullable=False)
     site_id =
-    FK2 =
     user_id =
     timestamp =
     event_type_id =

@@ -8,11 +8,11 @@ class Data(db.Model):
     quantity_id = db.Column(db.Integer, nullable=False)
     timestamp_from = db.Column(db.TIMESTAMP)
     timestamp_to = db.Column(db.TIMESTAMP)
-    #mean =
-    #min =
-    #max =
-    #stdev =
-    #records =
+    mean = db.Column(db.String(200))
+    min = db.Column(db.String(200))
+    max = db.Column(db.String(200))
+    stdev = db.Column(db.String(200))
+    records = db.Column(db.String(200))
 
     def __repr__(self):
         return '{}'.format(self.name)

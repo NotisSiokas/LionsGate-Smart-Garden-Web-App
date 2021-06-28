@@ -4,9 +4,8 @@ from app import db
 class SensorHistory(db.Model):
     __tablename__ = 'sensor_history'
 
-    id =
+    id = db.Column(db.Integer, primary_key=True, nullable=False)
     sensor_id =
-    FK2 =
     user_id =
     timestamp =
     event_type_id =

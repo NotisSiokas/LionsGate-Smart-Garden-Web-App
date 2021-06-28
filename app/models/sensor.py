@@ -9,8 +9,8 @@ class Sensor(db.Model):
     sensor_type_id = db.Column(db.Integer, nullable=False)
     name = db.Column(db.String(50), nullable=False)
     description = db.Column(db.String(200))
-    #sample_period =
-    #average_period =
+    sample_period = db.Column(db.String(200))
+    average_period = db.Column(db.String(200))
 
     def __repr__(self):
         return '{}'.format(self.name)
