@@ -8,7 +8,7 @@ class Project(db.Model):
     user_id = db.Column(db.Integer)
     name = db.Column(db.VARCHAR(60), unique=True, nullable=False)
     description = db.Column(db.VARCHAR(200), unique=True, nullable=True)
-    sample_period = db.Column(db.Integer, nullable=False))
+    sample_period = db.Column(db.Integer, nullable=False)
     average_period = db.Column(db.Integer, nullable=False)
 
     def __repr__(self):

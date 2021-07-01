@@ -4,7 +4,7 @@ from app import db
 class Site(db.Model):
     __tablename__ = 'site'
 
-    id = db.Column(db.Integer, primary_key=False)
+    id = db.Column(db.Integer, primary_key=True)
     project_id = db.Column(db.Integer, unique=True, nullable=False)
     name = db.Column(db.VARCHAR(100), unique=True, nullable=False)
     description = db.Column(db.VARCHAR(200), unique=True, nullable=False)

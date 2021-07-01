@@ -1,7 +1,7 @@
 from flask import render_template, url_for, redirect, flash
 from app.admin import admin
 from app import db
-from app.models import SubjectGroup, Organisation
+from app.models import Organisation
 from app.admin.forms.organisation import *
 from sqlalchemy.exc import SQLAlchemyError
 from flask_login import login_required
