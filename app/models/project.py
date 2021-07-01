@@ -6,10 +6,10 @@ class Project(db.Model):
 
     id = db.Column(db.Integer, primary_key=True, nullable=False)
     user_id = db.Column(db.Integer)
-    name = db.Column(db.String(60), unique=True, nullable=False)
-    description = db.Column(db.String(200), unique=True, nullable=False)
-    sample_period = db.Column(db.String(200))
-    average_period = db.Column(db.String(200))
+    name = db.Column(db.VARCHAR(60), unique=True, nullable=False)
+    description = db.Column(db.VARCHAR(200), unique=True, nullable=True)
+    sample_period = db.Column(db.Integer, nullable=False))
+    average_period = db.Column(db.Integer, nullable=False)
 
     def __repr__(self):
         return '{}'.format(self.name)
