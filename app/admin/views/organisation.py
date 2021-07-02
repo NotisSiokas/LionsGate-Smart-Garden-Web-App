@@ -73,12 +73,28 @@ def delete_organisation(id):
 @login_required
 def edit_organisation(id):
     organisation = Organisation.query.get_or_404(id)
-    form = OrganisationForms(obj=organisation)
+    form = OrganisationForm(obj=organisation)
 
     if form.validate_on_submit():
         organisation.name = form.name.data
-        db.session.commit()
-        return redirect(url_for('admin.list_organisation'))
+        organisation.address = form.address.data
+        organisation.city = form.city.data
+        organisation.post_code = form.post_code.data
+        organisation.country = form.country.data
+        organisation.url = form.url.data
+        organisation.telephone = form.telephone.data
+        organisation.email = form.email.data
+        try:
+            db.session.commit()
+            return redirect(url_for('admin.list_organisation'))
+        except SQLAlchemyError as e:
+            db.session.rollback()
+            error = str(e.__dict__['orig'])
+            flash('{}'.format(error), 'error')
+        except Exception as e:
+            db.session.rollback()
+            flash('An error occurred - update failed', 'error')
+
 
     return render_template('form_page.html',
                            form=form,
