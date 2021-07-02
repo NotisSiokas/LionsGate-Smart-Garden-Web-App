@@ -23545,3 +23545,1056 @@ WHERE staff.id = %(pk_1)s
 2021-07-02 14:04:00,385 INFO sqlalchemy.engine.Engine Thread-23: [cached since 10.36s ago] {'pk_1': 2}
 2021-07-02 14:04:00,388 INFO sqlalchemy.engine.Engine Thread-23: ROLLBACK
 2021-07-02 14:04:00,389 INFO werkzeug Thread-23: 127.0.0.1 - - [02/Jul/2021 14:04:00] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 14:24:54,770 INFO werkzeug MainThread:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-02 14:25:15,878 INFO sqlalchemy.engine.Engine Thread-1: SHOW VARIABLES LIKE 'sql_mode'
+2021-07-02 14:25:15,878 INFO sqlalchemy.engine.Engine Thread-1: [raw sql] {}
+2021-07-02 14:25:15,881 INFO sqlalchemy.engine.Engine Thread-1: SHOW VARIABLES LIKE 'lower_case_table_names'
+2021-07-02 14:25:15,882 INFO sqlalchemy.engine.Engine Thread-1: [generated in 0.00056s] {}
+2021-07-02 14:25:15,887 INFO sqlalchemy.engine.Engine Thread-1: SELECT DATABASE()
+2021-07-02 14:25:15,887 INFO sqlalchemy.engine.Engine Thread-1: [raw sql] {}
+2021-07-02 14:25:15,889 INFO sqlalchemy.engine.Engine Thread-1: BEGIN (implicit)
+2021-07-02 14:25:15,892 INFO sqlalchemy.engine.Engine Thread-1: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:25:15,892 INFO sqlalchemy.engine.Engine Thread-1: [generated in 0.00036s] {'pk_1': 2}
+2021-07-02 14:25:15,901 ERROR app Thread-1: Exception on /organisation/add [POST]
+Traceback (most recent call last):
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/notis/PycharmProjects/students_app/app/admin/views/organisation.py", line 24, in add_organisation
+    organisation = Organisation(
+  File "<string>", line 4, in __init__
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/sqlalchemy/orm/state.py", line 480, in _initialize_instance
+    manager.dispatch.init_failure(self, args, kwargs)
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/sqlalchemy/orm/state.py", line 477, in _initialize_instance
+    return manager.original_init(*mixed[1:], **kwargs)
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/sqlalchemy/orm/decl_base.py", line 1142, in _declarative_constructor
+    raise TypeError(
+TypeError: 'submit' is an invalid keyword argument for Organisation
+2021-07-02 14:25:15,932 INFO sqlalchemy.engine.Engine Thread-1: ROLLBACK
+2021-07-02 14:25:15,932 INFO werkzeug Thread-1: 127.0.0.1 - - [02/Jul/2021 14:25:15] "[35m[1mPOST /organisation/add HTTP/1.1[0m" 500 -
+2021-07-02 14:25:15,963 INFO sqlalchemy.engine.Engine Thread-2: BEGIN (implicit)
+2021-07-02 14:25:15,964 INFO sqlalchemy.engine.Engine Thread-2: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:25:15,964 INFO sqlalchemy.engine.Engine Thread-2: [cached since 0.0722s ago] {'pk_1': 2}
+2021-07-02 14:25:15,967 INFO sqlalchemy.engine.Engine Thread-2: ROLLBACK
+2021-07-02 14:25:15,968 INFO werkzeug Thread-2: 127.0.0.1 - - [02/Jul/2021 14:25:15] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 14:25:16,037 INFO werkzeug Thread-3: 127.0.0.1 - - [02/Jul/2021 14:25:16] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 14:25:16,040 INFO werkzeug Thread-4: 127.0.0.1 - - [02/Jul/2021 14:25:16] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 14:25:16,110 INFO sqlalchemy.engine.Engine Thread-5: BEGIN (implicit)
+2021-07-02 14:25:16,111 INFO sqlalchemy.engine.Engine Thread-5: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:25:16,111 INFO sqlalchemy.engine.Engine Thread-5: [cached since 0.2193s ago] {'pk_1': 2}
+2021-07-02 14:25:16,114 INFO sqlalchemy.engine.Engine Thread-5: ROLLBACK
+2021-07-02 14:25:16,114 INFO werkzeug Thread-5: 127.0.0.1 - - [02/Jul/2021 14:25:16] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 14:56:43,191 INFO werkzeug MainThread:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-02 14:56:47,718 INFO sqlalchemy.engine.Engine Thread-1: SHOW VARIABLES LIKE 'sql_mode'
+2021-07-02 14:56:47,718 INFO sqlalchemy.engine.Engine Thread-1: [raw sql] {}
+2021-07-02 14:56:47,766 INFO sqlalchemy.engine.Engine Thread-1: SHOW VARIABLES LIKE 'lower_case_table_names'
+2021-07-02 14:56:47,766 INFO sqlalchemy.engine.Engine Thread-1: [generated in 0.00048s] {}
+2021-07-02 14:56:47,771 INFO sqlalchemy.engine.Engine Thread-1: SELECT DATABASE()
+2021-07-02 14:56:47,771 INFO sqlalchemy.engine.Engine Thread-1: [raw sql] {}
+2021-07-02 14:56:47,774 INFO sqlalchemy.engine.Engine Thread-1: BEGIN (implicit)
+2021-07-02 14:56:47,777 INFO sqlalchemy.engine.Engine Thread-1: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:56:47,777 INFO sqlalchemy.engine.Engine Thread-1: [generated in 0.00040s] {'pk_1': 2}
+2021-07-02 14:56:47,836 INFO sqlalchemy.engine.Engine Thread-1: ROLLBACK
+2021-07-02 14:56:47,837 INFO werkzeug Thread-1: 127.0.0.1 - - [02/Jul/2021 14:56:47] "GET / HTTP/1.1" 200 -
+2021-07-02 14:56:47,897 INFO sqlalchemy.engine.Engine Thread-2: BEGIN (implicit)
+2021-07-02 14:56:47,898 INFO sqlalchemy.engine.Engine Thread-2: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:56:47,898 INFO sqlalchemy.engine.Engine Thread-2: [cached since 0.121s ago] {'pk_1': 2}
+2021-07-02 14:56:47,907 INFO sqlalchemy.engine.Engine Thread-2: ROLLBACK
+2021-07-02 14:56:47,907 INFO werkzeug Thread-2: 127.0.0.1 - - [02/Jul/2021 14:56:47] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 14:56:48,034 INFO werkzeug Thread-4: 127.0.0.1 - - [02/Jul/2021 14:56:48] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 14:56:48,035 INFO werkzeug Thread-3: 127.0.0.1 - - [02/Jul/2021 14:56:48] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 14:56:48,208 INFO sqlalchemy.engine.Engine Thread-5: BEGIN (implicit)
+2021-07-02 14:56:48,209 INFO sqlalchemy.engine.Engine Thread-5: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:56:48,209 INFO sqlalchemy.engine.Engine Thread-5: [cached since 0.4318s ago] {'pk_1': 2}
+2021-07-02 14:56:48,211 INFO sqlalchemy.engine.Engine Thread-5: ROLLBACK
+2021-07-02 14:56:48,212 INFO werkzeug Thread-5: 127.0.0.1 - - [02/Jul/2021 14:56:48] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 14:56:48,270 INFO sqlalchemy.engine.Engine Thread-6: BEGIN (implicit)
+2021-07-02 14:56:48,270 INFO sqlalchemy.engine.Engine Thread-6: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:56:48,270 INFO sqlalchemy.engine.Engine Thread-6: [cached since 0.4935s ago] {'pk_1': 2}
+2021-07-02 14:56:48,272 INFO sqlalchemy.engine.Engine Thread-6: ROLLBACK
+2021-07-02 14:56:48,273 INFO werkzeug Thread-6: 127.0.0.1 - - [02/Jul/2021 14:56:48] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 14:56:51,191 INFO sqlalchemy.engine.Engine Thread-7: BEGIN (implicit)
+2021-07-02 14:56:51,193 INFO sqlalchemy.engine.Engine Thread-7: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:56:51,193 INFO sqlalchemy.engine.Engine Thread-7: [cached since 3.416s ago] {'pk_1': 2}
+2021-07-02 14:56:51,198 INFO sqlalchemy.engine.Engine Thread-7: ROLLBACK
+2021-07-02 14:56:51,198 INFO werkzeug Thread-7: 127.0.0.1 - - [02/Jul/2021 14:56:51] "[32mGET /logout HTTP/1.1[0m" 302 -
+2021-07-02 14:56:51,309 INFO werkzeug Thread-8: 127.0.0.1 - - [02/Jul/2021 14:56:51] "GET /login HTTP/1.1" 200 -
+2021-07-02 14:56:51,350 INFO werkzeug Thread-9: 127.0.0.1 - - [02/Jul/2021 14:56:51] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 14:56:51,356 INFO werkzeug Thread-10: 127.0.0.1 - - [02/Jul/2021 14:56:51] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 14:56:51,422 INFO werkzeug Thread-11: 127.0.0.1 - - [02/Jul/2021 14:56:51] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 14:56:51,549 INFO werkzeug Thread-12: 127.0.0.1 - - [02/Jul/2021 14:56:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-02 14:56:52,395 INFO sqlalchemy.engine.Engine Thread-13: BEGIN (implicit)
+2021-07-02 14:56:52,402 INFO sqlalchemy.engine.Engine Thread-13: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.email = %(email_1)s 
+ LIMIT %(param_1)s
+2021-07-02 14:56:52,403 INFO sqlalchemy.engine.Engine Thread-13: [generated in 0.00051s] {'email_1': 'notis@napier.com', 'param_1': 1}
+2021-07-02 14:56:52,637 INFO sqlalchemy.engine.Engine Thread-13: ROLLBACK
+2021-07-02 14:56:52,639 INFO werkzeug Thread-13: 127.0.0.1 - - [02/Jul/2021 14:56:52] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021-07-02 14:56:52,645 INFO sqlalchemy.engine.Engine Thread-14: BEGIN (implicit)
+2021-07-02 14:56:52,645 INFO sqlalchemy.engine.Engine Thread-14: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:56:52,646 INFO sqlalchemy.engine.Engine Thread-14: [cached since 4.869s ago] {'pk_1': 2}
+2021-07-02 14:56:52,651 INFO sqlalchemy.engine.Engine Thread-14: ROLLBACK
+2021-07-02 14:56:52,653 INFO werkzeug Thread-14: 127.0.0.1 - - [02/Jul/2021 14:56:52] "GET / HTTP/1.1" 200 -
+2021-07-02 14:56:52,763 INFO sqlalchemy.engine.Engine Thread-15: BEGIN (implicit)
+2021-07-02 14:56:52,764 INFO sqlalchemy.engine.Engine Thread-15: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:56:52,764 INFO sqlalchemy.engine.Engine Thread-15: [cached since 4.987s ago] {'pk_1': 2}
+2021-07-02 14:56:52,774 INFO sqlalchemy.engine.Engine Thread-15: ROLLBACK
+2021-07-02 14:56:52,775 INFO werkzeug Thread-15: 127.0.0.1 - - [02/Jul/2021 14:56:52] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 14:56:52,787 INFO werkzeug Thread-16: 127.0.0.1 - - [02/Jul/2021 14:56:52] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 14:56:52,819 INFO werkzeug Thread-17: 127.0.0.1 - - [02/Jul/2021 14:56:52] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 14:56:52,906 INFO sqlalchemy.engine.Engine Thread-18: BEGIN (implicit)
+2021-07-02 14:56:52,907 INFO sqlalchemy.engine.Engine Thread-18: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:56:52,907 INFO sqlalchemy.engine.Engine Thread-18: [cached since 5.13s ago] {'pk_1': 2}
+2021-07-02 14:56:52,914 INFO sqlalchemy.engine.Engine Thread-18: ROLLBACK
+2021-07-02 14:56:52,915 INFO werkzeug Thread-18: 127.0.0.1 - - [02/Jul/2021 14:56:52] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 14:56:53,785 INFO sqlalchemy.engine.Engine Thread-19: BEGIN (implicit)
+2021-07-02 14:56:53,786 INFO sqlalchemy.engine.Engine Thread-19: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:56:53,786 INFO sqlalchemy.engine.Engine Thread-19: [cached since 6.009s ago] {'pk_1': 2}
+2021-07-02 14:56:53,788 INFO sqlalchemy.engine.Engine Thread-19: SELECT organisation.id AS organisation_id, organisation.name AS organisation_name, organisation.address AS organisation_address, organisation.city AS organisation_city, organisation.post_code AS organisation_post_code, organisation.country AS organisation_country, organisation.url AS organisation_url, organisation.telephone AS organisation_telephone, organisation.email AS organisation_email 
+FROM organisation
+2021-07-02 14:56:53,789 INFO sqlalchemy.engine.Engine Thread-19: [generated in 0.00045s] {}
+2021-07-02 14:56:53,801 INFO sqlalchemy.engine.Engine Thread-19: ROLLBACK
+2021-07-02 14:56:53,802 INFO werkzeug Thread-19: 127.0.0.1 - - [02/Jul/2021 14:56:53] "GET /organisation HTTP/1.1" 200 -
+2021-07-02 14:56:53,852 INFO sqlalchemy.engine.Engine Thread-20: BEGIN (implicit)
+2021-07-02 14:56:53,852 INFO sqlalchemy.engine.Engine Thread-20: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:56:53,852 INFO sqlalchemy.engine.Engine Thread-20: [cached since 6.076s ago] {'pk_1': 2}
+2021-07-02 14:56:53,857 INFO sqlalchemy.engine.Engine Thread-20: ROLLBACK
+2021-07-02 14:56:53,858 INFO werkzeug Thread-20: 127.0.0.1 - - [02/Jul/2021 14:56:53] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 14:56:53,869 INFO werkzeug Thread-21: 127.0.0.1 - - [02/Jul/2021 14:56:53] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 14:56:53,905 INFO werkzeug Thread-22: 127.0.0.1 - - [02/Jul/2021 14:56:53] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 14:56:53,955 INFO sqlalchemy.engine.Engine Thread-23: BEGIN (implicit)
+2021-07-02 14:56:53,955 INFO sqlalchemy.engine.Engine Thread-23: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:56:53,955 INFO sqlalchemy.engine.Engine Thread-23: [cached since 6.178s ago] {'pk_1': 2}
+2021-07-02 14:56:53,957 INFO sqlalchemy.engine.Engine Thread-23: ROLLBACK
+2021-07-02 14:56:53,957 INFO werkzeug Thread-23: 127.0.0.1 - - [02/Jul/2021 14:56:53] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 14:56:54,940 INFO sqlalchemy.engine.Engine Thread-24: BEGIN (implicit)
+2021-07-02 14:56:54,941 INFO sqlalchemy.engine.Engine Thread-24: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:56:54,941 INFO sqlalchemy.engine.Engine Thread-24: [cached since 7.164s ago] {'pk_1': 2}
+2021-07-02 14:56:54,953 INFO sqlalchemy.engine.Engine Thread-24: ROLLBACK
+2021-07-02 14:56:54,954 INFO werkzeug Thread-24: 127.0.0.1 - - [02/Jul/2021 14:56:54] "GET /organisation/add HTTP/1.1" 200 -
+2021-07-02 14:56:55,013 INFO sqlalchemy.engine.Engine Thread-25: BEGIN (implicit)
+2021-07-02 14:56:55,014 INFO sqlalchemy.engine.Engine Thread-25: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:56:55,014 INFO sqlalchemy.engine.Engine Thread-25: [cached since 7.237s ago] {'pk_1': 2}
+2021-07-02 14:56:55,017 INFO sqlalchemy.engine.Engine Thread-25: ROLLBACK
+2021-07-02 14:56:55,018 INFO werkzeug Thread-25: 127.0.0.1 - - [02/Jul/2021 14:56:55] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 14:56:55,022 INFO werkzeug Thread-26: 127.0.0.1 - - [02/Jul/2021 14:56:55] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 14:56:55,081 INFO werkzeug Thread-27: 127.0.0.1 - - [02/Jul/2021 14:56:55] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 14:56:55,136 INFO sqlalchemy.engine.Engine Thread-28: BEGIN (implicit)
+2021-07-02 14:56:55,137 INFO sqlalchemy.engine.Engine Thread-28: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:56:55,137 INFO sqlalchemy.engine.Engine Thread-28: [cached since 7.36s ago] {'pk_1': 2}
+2021-07-02 14:56:55,139 INFO sqlalchemy.engine.Engine Thread-28: ROLLBACK
+2021-07-02 14:56:55,140 INFO werkzeug Thread-28: 127.0.0.1 - - [02/Jul/2021 14:56:55] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 14:57:04,407 INFO sqlalchemy.engine.Engine Thread-29: BEGIN (implicit)
+2021-07-02 14:57:04,408 INFO sqlalchemy.engine.Engine Thread-29: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:04,408 INFO sqlalchemy.engine.Engine Thread-29: [cached since 16.63s ago] {'pk_1': 2}
+2021-07-02 14:57:04,411 ERROR app Thread-29: Exception on /organisation/add [POST]
+Traceback (most recent call last):
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/notis/PycharmProjects/students_app/app/admin/views/organisation.py", line 24, in add_organisation
+    organisation = Organisation(
+  File "<string>", line 4, in __init__
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/sqlalchemy/orm/state.py", line 480, in _initialize_instance
+    manager.dispatch.init_failure(self, args, kwargs)
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/sqlalchemy/orm/state.py", line 477, in _initialize_instance
+    return manager.original_init(*mixed[1:], **kwargs)
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/sqlalchemy/orm/decl_base.py", line 1142, in _declarative_constructor
+    raise TypeError(
+TypeError: 'submit' is an invalid keyword argument for Organisation
+2021-07-02 14:57:04,419 INFO sqlalchemy.engine.Engine Thread-29: ROLLBACK
+2021-07-02 14:57:04,419 INFO werkzeug Thread-29: 127.0.0.1 - - [02/Jul/2021 14:57:04] "[35m[1mPOST /organisation/add HTTP/1.1[0m" 500 -
+2021-07-02 14:57:04,447 INFO sqlalchemy.engine.Engine Thread-30: BEGIN (implicit)
+2021-07-02 14:57:04,447 INFO sqlalchemy.engine.Engine Thread-30: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:04,449 INFO sqlalchemy.engine.Engine Thread-30: [cached since 16.67s ago] {'pk_1': 2}
+2021-07-02 14:57:04,453 INFO werkzeug Thread-31: 127.0.0.1 - - [02/Jul/2021 14:57:04] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 14:57:04,455 INFO sqlalchemy.engine.Engine Thread-30: ROLLBACK
+2021-07-02 14:57:04,456 INFO werkzeug Thread-30: 127.0.0.1 - - [02/Jul/2021 14:57:04] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 14:57:04,489 INFO werkzeug Thread-32: 127.0.0.1 - - [02/Jul/2021 14:57:04] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 14:57:04,551 INFO sqlalchemy.engine.Engine Thread-33: BEGIN (implicit)
+2021-07-02 14:57:04,552 INFO sqlalchemy.engine.Engine Thread-33: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:04,552 INFO sqlalchemy.engine.Engine Thread-33: [cached since 16.78s ago] {'pk_1': 2}
+2021-07-02 14:57:04,554 INFO sqlalchemy.engine.Engine Thread-33: ROLLBACK
+2021-07-02 14:57:04,555 INFO werkzeug Thread-33: 127.0.0.1 - - [02/Jul/2021 14:57:04] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 14:57:11,336 INFO sqlalchemy.engine.Engine Thread-34: BEGIN (implicit)
+2021-07-02 14:57:11,337 INFO sqlalchemy.engine.Engine Thread-34: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:11,337 INFO sqlalchemy.engine.Engine Thread-34: [cached since 23.56s ago] {'pk_1': 2}
+2021-07-02 14:57:11,339 INFO sqlalchemy.engine.Engine Thread-34: SELECT organisation.id AS organisation_id, organisation.name AS organisation_name, organisation.address AS organisation_address, organisation.city AS organisation_city, organisation.post_code AS organisation_post_code, organisation.country AS organisation_country, organisation.url AS organisation_url, organisation.telephone AS organisation_telephone, organisation.email AS organisation_email 
+FROM organisation 
+WHERE organisation.id = %(pk_1)s
+2021-07-02 14:57:11,339 INFO sqlalchemy.engine.Engine Thread-34: [generated in 0.00032s] {'pk_1': 2}
+2021-07-02 14:57:11,342 INFO sqlalchemy.engine.Engine Thread-34: ROLLBACK
+2021-07-02 14:57:11,343 INFO werkzeug Thread-34: 127.0.0.1 - - [02/Jul/2021 14:57:11] "GET /organisation/edit/2 HTTP/1.1" 200 -
+2021-07-02 14:57:11,393 INFO sqlalchemy.engine.Engine Thread-35: BEGIN (implicit)
+2021-07-02 14:57:11,394 INFO sqlalchemy.engine.Engine Thread-35: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:11,396 INFO sqlalchemy.engine.Engine Thread-35: [cached since 23.62s ago] {'pk_1': 2}
+2021-07-02 14:57:11,400 INFO sqlalchemy.engine.Engine Thread-35: ROLLBACK
+2021-07-02 14:57:11,401 INFO werkzeug Thread-35: 127.0.0.1 - - [02/Jul/2021 14:57:11] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 14:57:11,403 INFO werkzeug Thread-36: 127.0.0.1 - - [02/Jul/2021 14:57:11] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 14:57:11,432 INFO werkzeug Thread-37: 127.0.0.1 - - [02/Jul/2021 14:57:11] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 14:57:11,459 INFO sqlalchemy.engine.Engine Thread-38: BEGIN (implicit)
+2021-07-02 14:57:11,459 INFO sqlalchemy.engine.Engine Thread-38: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:11,459 INFO sqlalchemy.engine.Engine Thread-38: [cached since 23.68s ago] {'pk_1': 2}
+2021-07-02 14:57:11,462 INFO sqlalchemy.engine.Engine Thread-38: ROLLBACK
+2021-07-02 14:57:11,463 INFO werkzeug Thread-38: 127.0.0.1 - - [02/Jul/2021 14:57:11] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 14:57:13,946 INFO sqlalchemy.engine.Engine Thread-39: BEGIN (implicit)
+2021-07-02 14:57:13,947 INFO sqlalchemy.engine.Engine Thread-39: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:13,947 INFO sqlalchemy.engine.Engine Thread-39: [cached since 26.17s ago] {'pk_1': 2}
+2021-07-02 14:57:13,949 INFO sqlalchemy.engine.Engine Thread-39: SELECT organisation.id AS organisation_id, organisation.name AS organisation_name, organisation.address AS organisation_address, organisation.city AS organisation_city, organisation.post_code AS organisation_post_code, organisation.country AS organisation_country, organisation.url AS organisation_url, organisation.telephone AS organisation_telephone, organisation.email AS organisation_email 
+FROM organisation 
+WHERE organisation.id = %(pk_1)s
+2021-07-02 14:57:13,949 INFO sqlalchemy.engine.Engine Thread-39: [cached since 2.61s ago] {'pk_1': 2}
+2021-07-02 14:57:13,954 INFO sqlalchemy.engine.Engine Thread-39: UPDATE organisation SET name=%(name)s WHERE organisation.id = %(organisation_id)s
+2021-07-02 14:57:13,954 INFO sqlalchemy.engine.Engine Thread-39: [generated in 0.00036s] {'name': 'Napier University 2', 'organisation_id': 2}
+2021-07-02 14:57:13,957 INFO sqlalchemy.engine.Engine Thread-39: COMMIT
+2021-07-02 14:57:13,974 INFO werkzeug Thread-39: 127.0.0.1 - - [02/Jul/2021 14:57:13] "[32mPOST /organisation/edit/2 HTTP/1.1[0m" 302 -
+2021-07-02 14:57:13,979 INFO sqlalchemy.engine.Engine Thread-40: BEGIN (implicit)
+2021-07-02 14:57:13,980 INFO sqlalchemy.engine.Engine Thread-40: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:13,980 INFO sqlalchemy.engine.Engine Thread-40: [cached since 26.2s ago] {'pk_1': 2}
+2021-07-02 14:57:13,982 INFO sqlalchemy.engine.Engine Thread-40: SELECT organisation.id AS organisation_id, organisation.name AS organisation_name, organisation.address AS organisation_address, organisation.city AS organisation_city, organisation.post_code AS organisation_post_code, organisation.country AS organisation_country, organisation.url AS organisation_url, organisation.telephone AS organisation_telephone, organisation.email AS organisation_email 
+FROM organisation
+2021-07-02 14:57:13,982 INFO sqlalchemy.engine.Engine Thread-40: [cached since 20.19s ago] {}
+2021-07-02 14:57:13,983 INFO sqlalchemy.engine.Engine Thread-40: ROLLBACK
+2021-07-02 14:57:13,984 INFO werkzeug Thread-40: 127.0.0.1 - - [02/Jul/2021 14:57:13] "GET /organisation HTTP/1.1" 200 -
+2021-07-02 14:57:14,024 INFO sqlalchemy.engine.Engine Thread-41: BEGIN (implicit)
+2021-07-02 14:57:14,025 INFO sqlalchemy.engine.Engine Thread-41: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:14,025 INFO sqlalchemy.engine.Engine Thread-41: [cached since 26.25s ago] {'pk_1': 2}
+2021-07-02 14:57:14,028 INFO sqlalchemy.engine.Engine Thread-41: ROLLBACK
+2021-07-02 14:57:14,030 INFO werkzeug Thread-41: 127.0.0.1 - - [02/Jul/2021 14:57:14] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 14:57:14,033 INFO werkzeug Thread-42: 127.0.0.1 - - [02/Jul/2021 14:57:14] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 14:57:14,062 INFO werkzeug Thread-43: 127.0.0.1 - - [02/Jul/2021 14:57:14] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 14:57:14,088 INFO sqlalchemy.engine.Engine Thread-44: BEGIN (implicit)
+2021-07-02 14:57:14,089 INFO sqlalchemy.engine.Engine Thread-44: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:14,089 INFO sqlalchemy.engine.Engine Thread-44: [cached since 26.31s ago] {'pk_1': 2}
+2021-07-02 14:57:14,090 INFO sqlalchemy.engine.Engine Thread-44: ROLLBACK
+2021-07-02 14:57:14,091 INFO werkzeug Thread-44: 127.0.0.1 - - [02/Jul/2021 14:57:14] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 14:57:17,860 INFO sqlalchemy.engine.Engine Thread-45: BEGIN (implicit)
+2021-07-02 14:57:17,861 INFO sqlalchemy.engine.Engine Thread-45: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:17,861 INFO sqlalchemy.engine.Engine Thread-45: [cached since 30.08s ago] {'pk_1': 2}
+2021-07-02 14:57:17,862 INFO sqlalchemy.engine.Engine Thread-45: SELECT organisation.id AS organisation_id, organisation.name AS organisation_name, organisation.address AS organisation_address, organisation.city AS organisation_city, organisation.post_code AS organisation_post_code, organisation.country AS organisation_country, organisation.url AS organisation_url, organisation.telephone AS organisation_telephone, organisation.email AS organisation_email 
+FROM organisation 
+WHERE organisation.id = %(pk_1)s
+2021-07-02 14:57:17,862 INFO sqlalchemy.engine.Engine Thread-45: [cached since 6.523s ago] {'pk_1': 2}
+2021-07-02 14:57:17,866 INFO sqlalchemy.engine.Engine Thread-45: ROLLBACK
+2021-07-02 14:57:17,867 INFO werkzeug Thread-45: 127.0.0.1 - - [02/Jul/2021 14:57:17] "GET /organisation/edit/2 HTTP/1.1" 200 -
+2021-07-02 14:57:17,899 INFO sqlalchemy.engine.Engine Thread-46: BEGIN (implicit)
+2021-07-02 14:57:17,899 INFO sqlalchemy.engine.Engine Thread-46: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:17,900 INFO sqlalchemy.engine.Engine Thread-46: [cached since 30.12s ago] {'pk_1': 2}
+2021-07-02 14:57:17,902 INFO sqlalchemy.engine.Engine Thread-46: ROLLBACK
+2021-07-02 14:57:17,904 INFO werkzeug Thread-46: 127.0.0.1 - - [02/Jul/2021 14:57:17] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 14:57:17,907 INFO werkzeug Thread-47: 127.0.0.1 - - [02/Jul/2021 14:57:17] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 14:57:17,947 INFO werkzeug Thread-48: 127.0.0.1 - - [02/Jul/2021 14:57:17] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 14:57:17,973 INFO sqlalchemy.engine.Engine Thread-49: BEGIN (implicit)
+2021-07-02 14:57:17,973 INFO sqlalchemy.engine.Engine Thread-49: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:17,973 INFO sqlalchemy.engine.Engine Thread-49: [cached since 30.2s ago] {'pk_1': 2}
+2021-07-02 14:57:17,976 INFO sqlalchemy.engine.Engine Thread-49: ROLLBACK
+2021-07-02 14:57:17,977 INFO werkzeug Thread-49: 127.0.0.1 - - [02/Jul/2021 14:57:17] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 14:57:19,795 INFO sqlalchemy.engine.Engine Thread-50: BEGIN (implicit)
+2021-07-02 14:57:19,796 INFO sqlalchemy.engine.Engine Thread-50: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:19,796 INFO sqlalchemy.engine.Engine Thread-50: [cached since 32.02s ago] {'pk_1': 2}
+2021-07-02 14:57:19,798 INFO sqlalchemy.engine.Engine Thread-50: SELECT organisation.id AS organisation_id, organisation.name AS organisation_name, organisation.address AS organisation_address, organisation.city AS organisation_city, organisation.post_code AS organisation_post_code, organisation.country AS organisation_country, organisation.url AS organisation_url, organisation.telephone AS organisation_telephone, organisation.email AS organisation_email 
+FROM organisation 
+WHERE organisation.id = %(pk_1)s
+2021-07-02 14:57:19,798 INFO sqlalchemy.engine.Engine Thread-50: [cached since 8.459s ago] {'pk_1': 2}
+2021-07-02 14:57:19,800 INFO sqlalchemy.engine.Engine Thread-50: COMMIT
+2021-07-02 14:57:19,802 INFO werkzeug Thread-50: 127.0.0.1 - - [02/Jul/2021 14:57:19] "[32mPOST /organisation/edit/2 HTTP/1.1[0m" 302 -
+2021-07-02 14:57:19,807 INFO sqlalchemy.engine.Engine Thread-51: BEGIN (implicit)
+2021-07-02 14:57:19,808 INFO sqlalchemy.engine.Engine Thread-51: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:19,808 INFO sqlalchemy.engine.Engine Thread-51: [cached since 32.03s ago] {'pk_1': 2}
+2021-07-02 14:57:19,809 INFO sqlalchemy.engine.Engine Thread-51: SELECT organisation.id AS organisation_id, organisation.name AS organisation_name, organisation.address AS organisation_address, organisation.city AS organisation_city, organisation.post_code AS organisation_post_code, organisation.country AS organisation_country, organisation.url AS organisation_url, organisation.telephone AS organisation_telephone, organisation.email AS organisation_email 
+FROM organisation
+2021-07-02 14:57:19,809 INFO sqlalchemy.engine.Engine Thread-51: [cached since 26.02s ago] {}
+2021-07-02 14:57:19,812 INFO sqlalchemy.engine.Engine Thread-51: ROLLBACK
+2021-07-02 14:57:19,813 INFO werkzeug Thread-51: 127.0.0.1 - - [02/Jul/2021 14:57:19] "GET /organisation HTTP/1.1" 200 -
+2021-07-02 14:57:19,856 INFO sqlalchemy.engine.Engine Thread-52: BEGIN (implicit)
+2021-07-02 14:57:19,857 INFO sqlalchemy.engine.Engine Thread-52: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:19,857 INFO sqlalchemy.engine.Engine Thread-52: [cached since 32.08s ago] {'pk_1': 2}
+2021-07-02 14:57:19,862 INFO sqlalchemy.engine.Engine Thread-52: ROLLBACK
+2021-07-02 14:57:19,863 INFO werkzeug Thread-52: 127.0.0.1 - - [02/Jul/2021 14:57:19] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 14:57:19,865 INFO werkzeug Thread-53: 127.0.0.1 - - [02/Jul/2021 14:57:19] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 14:57:19,892 INFO werkzeug Thread-54: 127.0.0.1 - - [02/Jul/2021 14:57:19] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 14:57:19,920 INFO sqlalchemy.engine.Engine Thread-55: BEGIN (implicit)
+2021-07-02 14:57:19,921 INFO sqlalchemy.engine.Engine Thread-55: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:19,921 INFO sqlalchemy.engine.Engine Thread-55: [cached since 32.14s ago] {'pk_1': 2}
+2021-07-02 14:57:19,922 INFO sqlalchemy.engine.Engine Thread-55: ROLLBACK
+2021-07-02 14:57:19,923 INFO werkzeug Thread-55: 127.0.0.1 - - [02/Jul/2021 14:57:19] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 14:57:22,010 INFO sqlalchemy.engine.Engine Thread-56: BEGIN (implicit)
+2021-07-02 14:57:22,012 INFO sqlalchemy.engine.Engine Thread-56: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:22,012 INFO sqlalchemy.engine.Engine Thread-56: [cached since 34.24s ago] {'pk_1': 2}
+2021-07-02 14:57:22,016 INFO sqlalchemy.engine.Engine Thread-56: ROLLBACK
+2021-07-02 14:57:22,017 INFO werkzeug Thread-56: 127.0.0.1 - - [02/Jul/2021 14:57:22] "GET /organisation/add HTTP/1.1" 200 -
+2021-07-02 14:57:22,052 INFO sqlalchemy.engine.Engine Thread-57: BEGIN (implicit)
+2021-07-02 14:57:22,052 INFO sqlalchemy.engine.Engine Thread-57: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:22,052 INFO sqlalchemy.engine.Engine Thread-57: [cached since 34.28s ago] {'pk_1': 2}
+2021-07-02 14:57:22,058 INFO sqlalchemy.engine.Engine Thread-57: ROLLBACK
+2021-07-02 14:57:22,059 INFO werkzeug Thread-57: 127.0.0.1 - - [02/Jul/2021 14:57:22] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 14:57:22,063 INFO werkzeug Thread-58: 127.0.0.1 - - [02/Jul/2021 14:57:22] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 14:57:22,092 INFO werkzeug Thread-59: 127.0.0.1 - - [02/Jul/2021 14:57:22] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 14:57:22,116 INFO sqlalchemy.engine.Engine Thread-60: BEGIN (implicit)
+2021-07-02 14:57:22,117 INFO sqlalchemy.engine.Engine Thread-60: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:22,117 INFO sqlalchemy.engine.Engine Thread-60: [cached since 34.34s ago] {'pk_1': 2}
+2021-07-02 14:57:22,119 INFO sqlalchemy.engine.Engine Thread-60: ROLLBACK
+2021-07-02 14:57:22,120 INFO werkzeug Thread-60: 127.0.0.1 - - [02/Jul/2021 14:57:22] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 14:57:25,065 INFO sqlalchemy.engine.Engine Thread-61: BEGIN (implicit)
+2021-07-02 14:57:25,065 INFO sqlalchemy.engine.Engine Thread-61: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:25,065 INFO sqlalchemy.engine.Engine Thread-61: [cached since 37.29s ago] {'pk_1': 2}
+2021-07-02 14:57:25,067 INFO sqlalchemy.engine.Engine Thread-61: SELECT organisation.id AS organisation_id, organisation.name AS organisation_name, organisation.address AS organisation_address, organisation.city AS organisation_city, organisation.post_code AS organisation_post_code, organisation.country AS organisation_country, organisation.url AS organisation_url, organisation.telephone AS organisation_telephone, organisation.email AS organisation_email 
+FROM organisation 
+WHERE organisation.id = %(pk_1)s
+2021-07-02 14:57:25,067 INFO sqlalchemy.engine.Engine Thread-61: [cached since 13.73s ago] {'pk_1': 2}
+2021-07-02 14:57:25,070 INFO sqlalchemy.engine.Engine Thread-61: ROLLBACK
+2021-07-02 14:57:25,071 INFO werkzeug Thread-61: 127.0.0.1 - - [02/Jul/2021 14:57:25] "GET /organisation/edit/2 HTTP/1.1" 200 -
+2021-07-02 14:57:25,111 INFO sqlalchemy.engine.Engine Thread-62: BEGIN (implicit)
+2021-07-02 14:57:25,114 INFO sqlalchemy.engine.Engine Thread-62: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:25,114 INFO sqlalchemy.engine.Engine Thread-62: [cached since 37.34s ago] {'pk_1': 2}
+2021-07-02 14:57:25,118 INFO sqlalchemy.engine.Engine Thread-62: ROLLBACK
+2021-07-02 14:57:25,120 INFO werkzeug Thread-62: 127.0.0.1 - - [02/Jul/2021 14:57:25] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 14:57:25,122 INFO werkzeug Thread-63: 127.0.0.1 - - [02/Jul/2021 14:57:25] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 14:57:25,152 INFO werkzeug Thread-64: 127.0.0.1 - - [02/Jul/2021 14:57:25] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 14:57:25,180 INFO sqlalchemy.engine.Engine Thread-65: BEGIN (implicit)
+2021-07-02 14:57:25,181 INFO sqlalchemy.engine.Engine Thread-65: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:25,181 INFO sqlalchemy.engine.Engine Thread-65: [cached since 37.4s ago] {'pk_1': 2}
+2021-07-02 14:57:25,184 INFO sqlalchemy.engine.Engine Thread-65: ROLLBACK
+2021-07-02 14:57:25,184 INFO werkzeug Thread-65: 127.0.0.1 - - [02/Jul/2021 14:57:25] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 14:57:28,132 INFO sqlalchemy.engine.Engine Thread-66: BEGIN (implicit)
+2021-07-02 14:57:28,133 INFO sqlalchemy.engine.Engine Thread-66: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:28,133 INFO sqlalchemy.engine.Engine Thread-66: [cached since 40.36s ago] {'pk_1': 2}
+2021-07-02 14:57:28,135 INFO sqlalchemy.engine.Engine Thread-66: SELECT organisation.id AS organisation_id, organisation.name AS organisation_name, organisation.address AS organisation_address, organisation.city AS organisation_city, organisation.post_code AS organisation_post_code, organisation.country AS organisation_country, organisation.url AS organisation_url, organisation.telephone AS organisation_telephone, organisation.email AS organisation_email 
+FROM organisation 
+WHERE organisation.id = %(pk_1)s
+2021-07-02 14:57:28,135 INFO sqlalchemy.engine.Engine Thread-66: [cached since 16.8s ago] {'pk_1': 2}
+2021-07-02 14:57:28,137 INFO sqlalchemy.engine.Engine Thread-66: UPDATE organisation SET name=%(name)s WHERE organisation.id = %(organisation_id)s
+2021-07-02 14:57:28,137 INFO sqlalchemy.engine.Engine Thread-66: [cached since 14.18s ago] {'name': 'Napier University', 'organisation_id': 2}
+2021-07-02 14:57:28,138 INFO sqlalchemy.engine.Engine Thread-66: COMMIT
+2021-07-02 14:57:28,147 INFO werkzeug Thread-66: 127.0.0.1 - - [02/Jul/2021 14:57:28] "[32mPOST /organisation/edit/2 HTTP/1.1[0m" 302 -
+2021-07-02 14:57:28,151 INFO sqlalchemy.engine.Engine Thread-67: BEGIN (implicit)
+2021-07-02 14:57:28,152 INFO sqlalchemy.engine.Engine Thread-67: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:28,152 INFO sqlalchemy.engine.Engine Thread-67: [cached since 40.37s ago] {'pk_1': 2}
+2021-07-02 14:57:28,153 INFO sqlalchemy.engine.Engine Thread-67: SELECT organisation.id AS organisation_id, organisation.name AS organisation_name, organisation.address AS organisation_address, organisation.city AS organisation_city, organisation.post_code AS organisation_post_code, organisation.country AS organisation_country, organisation.url AS organisation_url, organisation.telephone AS organisation_telephone, organisation.email AS organisation_email 
+FROM organisation
+2021-07-02 14:57:28,153 INFO sqlalchemy.engine.Engine Thread-67: [cached since 34.36s ago] {}
+2021-07-02 14:57:28,154 INFO sqlalchemy.engine.Engine Thread-67: ROLLBACK
+2021-07-02 14:57:28,155 INFO werkzeug Thread-67: 127.0.0.1 - - [02/Jul/2021 14:57:28] "GET /organisation HTTP/1.1" 200 -
+2021-07-02 14:57:28,193 INFO sqlalchemy.engine.Engine Thread-68: BEGIN (implicit)
+2021-07-02 14:57:28,195 INFO sqlalchemy.engine.Engine Thread-68: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:28,195 INFO sqlalchemy.engine.Engine Thread-68: [cached since 40.42s ago] {'pk_1': 2}
+2021-07-02 14:57:28,202 INFO werkzeug Thread-69: 127.0.0.1 - - [02/Jul/2021 14:57:28] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 14:57:28,199 INFO sqlalchemy.engine.Engine Thread-68: ROLLBACK
+2021-07-02 14:57:28,203 INFO werkzeug Thread-68: 127.0.0.1 - - [02/Jul/2021 14:57:28] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 14:57:28,235 INFO werkzeug Thread-70: 127.0.0.1 - - [02/Jul/2021 14:57:28] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 14:57:28,261 INFO sqlalchemy.engine.Engine Thread-71: BEGIN (implicit)
+2021-07-02 14:57:28,262 INFO sqlalchemy.engine.Engine Thread-71: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:28,262 INFO sqlalchemy.engine.Engine Thread-71: [cached since 40.48s ago] {'pk_1': 2}
+2021-07-02 14:57:28,263 INFO sqlalchemy.engine.Engine Thread-71: ROLLBACK
+2021-07-02 14:57:28,264 INFO werkzeug Thread-71: 127.0.0.1 - - [02/Jul/2021 14:57:28] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 14:57:38,416 INFO sqlalchemy.engine.Engine Thread-72: BEGIN (implicit)
+2021-07-02 14:57:38,416 INFO sqlalchemy.engine.Engine Thread-72: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:38,416 INFO sqlalchemy.engine.Engine Thread-72: [cached since 50.64s ago] {'pk_1': 2}
+2021-07-02 14:57:38,420 INFO sqlalchemy.engine.Engine Thread-72: ROLLBACK
+2021-07-02 14:57:38,420 INFO werkzeug Thread-72: 127.0.0.1 - - [02/Jul/2021 14:57:38] "GET /organisation/add HTTP/1.1" 200 -
+2021-07-02 14:57:38,451 INFO sqlalchemy.engine.Engine Thread-73: BEGIN (implicit)
+2021-07-02 14:57:38,452 INFO sqlalchemy.engine.Engine Thread-73: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:38,452 INFO sqlalchemy.engine.Engine Thread-73: [cached since 50.68s ago] {'pk_1': 2}
+2021-07-02 14:57:38,457 INFO werkzeug Thread-74: 127.0.0.1 - - [02/Jul/2021 14:57:38] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 14:57:38,460 INFO sqlalchemy.engine.Engine Thread-73: ROLLBACK
+2021-07-02 14:57:38,461 INFO werkzeug Thread-73: 127.0.0.1 - - [02/Jul/2021 14:57:38] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 14:57:38,535 INFO werkzeug Thread-75: 127.0.0.1 - - [02/Jul/2021 14:57:38] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 14:57:38,570 INFO sqlalchemy.engine.Engine Thread-76: BEGIN (implicit)
+2021-07-02 14:57:38,571 INFO sqlalchemy.engine.Engine Thread-76: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:38,571 INFO sqlalchemy.engine.Engine Thread-76: [cached since 50.79s ago] {'pk_1': 2}
+2021-07-02 14:57:38,573 INFO sqlalchemy.engine.Engine Thread-76: ROLLBACK
+2021-07-02 14:57:38,574 INFO werkzeug Thread-76: 127.0.0.1 - - [02/Jul/2021 14:57:38] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 14:57:50,144 INFO sqlalchemy.engine.Engine Thread-77: BEGIN (implicit)
+2021-07-02 14:57:50,145 INFO sqlalchemy.engine.Engine Thread-77: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:50,145 INFO sqlalchemy.engine.Engine Thread-77: [cached since 62.37s ago] {'pk_1': 2}
+2021-07-02 14:57:50,148 ERROR app Thread-77: Exception on /organisation/add [POST]
+Traceback (most recent call last):
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/notis/PycharmProjects/students_app/app/admin/views/organisation.py", line 24, in add_organisation
+    organisation = Organisation(
+  File "<string>", line 4, in __init__
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/sqlalchemy/orm/state.py", line 480, in _initialize_instance
+    manager.dispatch.init_failure(self, args, kwargs)
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/sqlalchemy/orm/state.py", line 477, in _initialize_instance
+    return manager.original_init(*mixed[1:], **kwargs)
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/sqlalchemy/orm/decl_base.py", line 1142, in _declarative_constructor
+    raise TypeError(
+TypeError: 'submit' is an invalid keyword argument for Organisation
+2021-07-02 14:57:50,149 INFO sqlalchemy.engine.Engine Thread-77: ROLLBACK
+2021-07-02 14:57:50,149 INFO werkzeug Thread-77: 127.0.0.1 - - [02/Jul/2021 14:57:50] "[35m[1mPOST /organisation/add HTTP/1.1[0m" 500 -
+2021-07-02 14:57:50,182 INFO sqlalchemy.engine.Engine Thread-78: BEGIN (implicit)
+2021-07-02 14:57:50,182 INFO sqlalchemy.engine.Engine Thread-78: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:50,183 INFO sqlalchemy.engine.Engine Thread-78: [cached since 62.41s ago] {'pk_1': 2}
+2021-07-02 14:57:50,187 INFO sqlalchemy.engine.Engine Thread-78: ROLLBACK
+2021-07-02 14:57:50,187 INFO werkzeug Thread-79: 127.0.0.1 - - [02/Jul/2021 14:57:50] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 14:57:50,188 INFO werkzeug Thread-78: 127.0.0.1 - - [02/Jul/2021 14:57:50] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 14:57:50,254 INFO werkzeug Thread-80: 127.0.0.1 - - [02/Jul/2021 14:57:50] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 14:57:50,288 INFO sqlalchemy.engine.Engine Thread-81: BEGIN (implicit)
+2021-07-02 14:57:50,288 INFO sqlalchemy.engine.Engine Thread-81: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 14:57:50,289 INFO sqlalchemy.engine.Engine Thread-81: [cached since 62.51s ago] {'pk_1': 2}
+2021-07-02 14:57:50,291 INFO sqlalchemy.engine.Engine Thread-81: ROLLBACK
+2021-07-02 14:57:50,292 INFO werkzeug Thread-81: 127.0.0.1 - - [02/Jul/2021 14:57:50] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 15:01:13,759 INFO sqlalchemy.engine.Engine Thread-82: BEGIN (implicit)
+2021-07-02 15:01:13,760 INFO sqlalchemy.engine.Engine Thread-82: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:01:13,760 INFO sqlalchemy.engine.Engine Thread-82: [cached since 266s ago] {'pk_1': 2}
+2021-07-02 15:01:13,762 INFO sqlalchemy.engine.Engine Thread-82: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff
+2021-07-02 15:01:13,762 INFO sqlalchemy.engine.Engine Thread-82: [generated in 0.00045s] {}
+2021-07-02 15:01:13,771 INFO sqlalchemy.engine.Engine Thread-82: SELECT subject_group.id AS subject_group_id, subject_group.name AS subject_group_name 
+FROM subject_group 
+WHERE subject_group.id = %(pk_1)s
+2021-07-02 15:01:13,771 INFO sqlalchemy.engine.Engine Thread-82: [generated in 0.00034s] {'pk_1': 1}
+2021-07-02 15:01:13,777 INFO sqlalchemy.engine.Engine Thread-82: SELECT subject_group.id AS subject_group_id, subject_group.name AS subject_group_name 
+FROM subject_group 
+WHERE subject_group.id = %(pk_1)s
+2021-07-02 15:01:13,777 INFO sqlalchemy.engine.Engine Thread-82: [cached since 0.005705s ago] {'pk_1': 4}
+2021-07-02 15:01:13,779 INFO sqlalchemy.engine.Engine Thread-82: SELECT subject_group.id AS subject_group_id, subject_group.name AS subject_group_name 
+FROM subject_group 
+WHERE subject_group.id = %(pk_1)s
+2021-07-02 15:01:13,779 INFO sqlalchemy.engine.Engine Thread-82: [cached since 0.007951s ago] {'pk_1': 3}
+2021-07-02 15:01:13,780 INFO sqlalchemy.engine.Engine Thread-82: ROLLBACK
+2021-07-02 15:01:13,781 INFO werkzeug Thread-82: 127.0.0.1 - - [02/Jul/2021 15:01:13] "GET /staff HTTP/1.1" 200 -
+2021-07-02 15:01:13,814 INFO sqlalchemy.engine.Engine Thread-83: BEGIN (implicit)
+2021-07-02 15:01:13,816 INFO sqlalchemy.engine.Engine Thread-83: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:01:13,816 INFO sqlalchemy.engine.Engine Thread-83: [cached since 266s ago] {'pk_1': 2}
+2021-07-02 15:01:13,818 INFO sqlalchemy.engine.Engine Thread-83: ROLLBACK
+2021-07-02 15:01:13,823 INFO werkzeug Thread-83: 127.0.0.1 - - [02/Jul/2021 15:01:13] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 15:01:13,825 INFO werkzeug Thread-84: 127.0.0.1 - - [02/Jul/2021 15:01:13] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 15:01:13,897 INFO werkzeug Thread-85: 127.0.0.1 - - [02/Jul/2021 15:01:13] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 15:01:13,927 INFO sqlalchemy.engine.Engine Thread-86: BEGIN (implicit)
+2021-07-02 15:01:13,928 INFO sqlalchemy.engine.Engine Thread-86: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:01:13,928 INFO sqlalchemy.engine.Engine Thread-86: [cached since 266.2s ago] {'pk_1': 2}
+2021-07-02 15:01:13,930 INFO sqlalchemy.engine.Engine Thread-86: ROLLBACK
+2021-07-02 15:01:13,931 INFO werkzeug Thread-86: 127.0.0.1 - - [02/Jul/2021 15:01:13] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 15:01:16,232 INFO sqlalchemy.engine.Engine Thread-87: BEGIN (implicit)
+2021-07-02 15:01:16,232 INFO sqlalchemy.engine.Engine Thread-87: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:01:16,233 INFO sqlalchemy.engine.Engine Thread-87: [cached since 268.5s ago] {'pk_1': 2}
+2021-07-02 15:01:16,237 INFO sqlalchemy.engine.Engine Thread-87: SELECT subject_group.id AS subject_group_id, subject_group.name AS subject_group_name 
+FROM subject_group
+2021-07-02 15:01:16,238 INFO sqlalchemy.engine.Engine Thread-87: [generated in 0.00053s] {}
+2021-07-02 15:01:16,239 INFO sqlalchemy.engine.Engine Thread-87: ROLLBACK
+2021-07-02 15:01:16,240 INFO werkzeug Thread-87: 127.0.0.1 - - [02/Jul/2021 15:01:16] "GET /staff/add HTTP/1.1" 200 -
+2021-07-02 15:01:16,276 INFO sqlalchemy.engine.Engine Thread-88: BEGIN (implicit)
+2021-07-02 15:01:16,277 INFO sqlalchemy.engine.Engine Thread-88: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:01:16,277 INFO sqlalchemy.engine.Engine Thread-88: [cached since 268.5s ago] {'pk_1': 2}
+2021-07-02 15:01:16,279 INFO sqlalchemy.engine.Engine Thread-88: ROLLBACK
+2021-07-02 15:01:16,280 INFO werkzeug Thread-88: 127.0.0.1 - - [02/Jul/2021 15:01:16] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 15:01:16,288 INFO werkzeug Thread-89: 127.0.0.1 - - [02/Jul/2021 15:01:16] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 15:01:16,324 INFO werkzeug Thread-90: 127.0.0.1 - - [02/Jul/2021 15:01:16] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 15:01:16,366 INFO sqlalchemy.engine.Engine Thread-91: BEGIN (implicit)
+2021-07-02 15:01:16,366 INFO sqlalchemy.engine.Engine Thread-91: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:01:16,366 INFO sqlalchemy.engine.Engine Thread-91: [cached since 268.6s ago] {'pk_1': 2}
+2021-07-02 15:01:16,369 INFO sqlalchemy.engine.Engine Thread-91: ROLLBACK
+2021-07-02 15:01:16,369 INFO werkzeug Thread-91: 127.0.0.1 - - [02/Jul/2021 15:01:16] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 15:01:34,949 INFO sqlalchemy.engine.Engine Thread-92: BEGIN (implicit)
+2021-07-02 15:01:34,950 INFO sqlalchemy.engine.Engine Thread-92: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:01:34,951 INFO sqlalchemy.engine.Engine Thread-92: [cached since 287.2s ago] {'pk_1': 2}
+2021-07-02 15:01:34,953 ERROR app Thread-92: Exception on /staff/add [POST]
+Traceback (most recent call last):
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/notis/PycharmProjects/students_app/app/admin/views/staff.py", line 29, in add_staff
+    subject_group_id=form.subject_group.data.id,
+AttributeError: 'NoneType' object has no attribute 'id'
+2021-07-02 15:01:34,955 INFO sqlalchemy.engine.Engine Thread-92: ROLLBACK
+2021-07-02 15:01:34,956 INFO werkzeug Thread-92: 127.0.0.1 - - [02/Jul/2021 15:01:34] "[35m[1mPOST /staff/add HTTP/1.1[0m" 500 -
+2021-07-02 15:01:34,985 INFO sqlalchemy.engine.Engine Thread-93: BEGIN (implicit)
+2021-07-02 15:01:34,986 INFO sqlalchemy.engine.Engine Thread-93: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:01:34,986 INFO sqlalchemy.engine.Engine Thread-93: [cached since 287.2s ago] {'pk_1': 2}
+2021-07-02 15:01:34,990 INFO sqlalchemy.engine.Engine Thread-93: ROLLBACK
+2021-07-02 15:01:34,991 INFO werkzeug Thread-93: 127.0.0.1 - - [02/Jul/2021 15:01:34] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 15:01:34,995 INFO werkzeug Thread-94: 127.0.0.1 - - [02/Jul/2021 15:01:34] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 15:01:35,060 INFO werkzeug Thread-95: 127.0.0.1 - - [02/Jul/2021 15:01:35] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 15:01:35,091 INFO sqlalchemy.engine.Engine Thread-96: BEGIN (implicit)
+2021-07-02 15:01:35,091 INFO sqlalchemy.engine.Engine Thread-96: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:01:35,092 INFO sqlalchemy.engine.Engine Thread-96: [cached since 287.3s ago] {'pk_1': 2}
+2021-07-02 15:01:35,093 INFO sqlalchemy.engine.Engine Thread-96: ROLLBACK
+2021-07-02 15:01:35,094 INFO werkzeug Thread-96: 127.0.0.1 - - [02/Jul/2021 15:01:35] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 15:02:24,848 INFO sqlalchemy.engine.Engine Thread-97: BEGIN (implicit)
+2021-07-02 15:02:24,849 INFO sqlalchemy.engine.Engine Thread-97: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:02:24,849 INFO sqlalchemy.engine.Engine Thread-97: [cached since 337.1s ago] {'pk_1': 2}
+2021-07-02 15:02:24,852 INFO sqlalchemy.engine.Engine Thread-97: SELECT subject_group.id AS subject_group_id, subject_group.name AS subject_group_name 
+FROM subject_group
+2021-07-02 15:02:24,852 INFO sqlalchemy.engine.Engine Thread-97: [cached since 68.61s ago] {}
+2021-07-02 15:02:25,027 INFO sqlalchemy.engine.Engine Thread-97: INSERT INTO staff (email, first_name, last_name, password_hash, subject_group_id) VALUES (%(email)s, %(first_name)s, %(last_name)s, %(password_hash)s, %(subject_group_id)s)
+2021-07-02 15:02:25,027 INFO sqlalchemy.engine.Engine Thread-97: [generated in 0.00049s] {'email': 'Oi@napier.com', 'first_name': 'Oi', 'last_name': 'Eno', 'password_hash': 'pbkdf2:sha256:260000$0Hpm0N4BKagvgq9K$812c959bab6a46377f1957f2ba3c2a4416b6d16de6e2021a768184c83c1e5365', 'subject_group_id': 5}
+2021-07-02 15:02:25,030 INFO sqlalchemy.engine.Engine Thread-97: COMMIT
+2021-07-02 15:02:25,044 INFO werkzeug Thread-97: 127.0.0.1 - - [02/Jul/2021 15:02:25] "[32mPOST /staff/add HTTP/1.1[0m" 302 -
+2021-07-02 15:02:25,050 INFO sqlalchemy.engine.Engine Thread-98: BEGIN (implicit)
+2021-07-02 15:02:25,050 INFO sqlalchemy.engine.Engine Thread-98: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:02:25,051 INFO sqlalchemy.engine.Engine Thread-98: [cached since 337.3s ago] {'pk_1': 2}
+2021-07-02 15:02:25,052 INFO sqlalchemy.engine.Engine Thread-98: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff
+2021-07-02 15:02:25,052 INFO sqlalchemy.engine.Engine Thread-98: [cached since 71.29s ago] {}
+2021-07-02 15:02:25,054 INFO sqlalchemy.engine.Engine Thread-98: SELECT subject_group.id AS subject_group_id, subject_group.name AS subject_group_name 
+FROM subject_group 
+WHERE subject_group.id = %(pk_1)s
+2021-07-02 15:02:25,054 INFO sqlalchemy.engine.Engine Thread-98: [cached since 71.28s ago] {'pk_1': 1}
+2021-07-02 15:02:25,056 INFO sqlalchemy.engine.Engine Thread-98: SELECT subject_group.id AS subject_group_id, subject_group.name AS subject_group_name 
+FROM subject_group 
+WHERE subject_group.id = %(pk_1)s
+2021-07-02 15:02:25,056 INFO sqlalchemy.engine.Engine Thread-98: [cached since 71.28s ago] {'pk_1': 4}
+2021-07-02 15:02:25,057 INFO sqlalchemy.engine.Engine Thread-98: SELECT subject_group.id AS subject_group_id, subject_group.name AS subject_group_name 
+FROM subject_group 
+WHERE subject_group.id = %(pk_1)s
+2021-07-02 15:02:25,057 INFO sqlalchemy.engine.Engine Thread-98: [cached since 71.29s ago] {'pk_1': 3}
+2021-07-02 15:02:25,059 INFO sqlalchemy.engine.Engine Thread-98: SELECT subject_group.id AS subject_group_id, subject_group.name AS subject_group_name 
+FROM subject_group 
+WHERE subject_group.id = %(pk_1)s
+2021-07-02 15:02:25,059 INFO sqlalchemy.engine.Engine Thread-98: [cached since 71.29s ago] {'pk_1': 5}
+2021-07-02 15:02:25,060 INFO sqlalchemy.engine.Engine Thread-98: ROLLBACK
+2021-07-02 15:02:25,061 INFO werkzeug Thread-98: 127.0.0.1 - - [02/Jul/2021 15:02:25] "GET /staff HTTP/1.1" 200 -
+2021-07-02 15:02:25,104 INFO sqlalchemy.engine.Engine Thread-99: BEGIN (implicit)
+2021-07-02 15:02:25,105 INFO sqlalchemy.engine.Engine Thread-99: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:02:25,105 INFO sqlalchemy.engine.Engine Thread-99: [cached since 337.3s ago] {'pk_1': 2}
+2021-07-02 15:02:25,108 INFO sqlalchemy.engine.Engine Thread-99: ROLLBACK
+2021-07-02 15:02:25,108 INFO werkzeug Thread-99: 127.0.0.1 - - [02/Jul/2021 15:02:25] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 15:02:25,111 INFO werkzeug Thread-100: 127.0.0.1 - - [02/Jul/2021 15:02:25] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 15:02:25,145 INFO werkzeug Thread-101: 127.0.0.1 - - [02/Jul/2021 15:02:25] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 15:04:21,376 INFO sqlalchemy.engine.Engine Thread-102: BEGIN (implicit)
+2021-07-02 15:04:21,376 INFO sqlalchemy.engine.Engine Thread-102: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:04:21,377 INFO sqlalchemy.engine.Engine Thread-102: [cached since 453.6s ago] {'pk_1': 2}
+2021-07-02 15:04:21,379 INFO sqlalchemy.engine.Engine Thread-102: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:04:21,380 INFO sqlalchemy.engine.Engine Thread-102: [cached since 453.6s ago] {'pk_1': 7}
+2021-07-02 15:04:21,383 INFO sqlalchemy.engine.Engine Thread-102: DELETE FROM staff WHERE staff.id = %(id)s
+2021-07-02 15:04:21,383 INFO sqlalchemy.engine.Engine Thread-102: [generated in 0.00045s] {'id': 7}
+2021-07-02 15:04:21,385 INFO sqlalchemy.engine.Engine Thread-102: COMMIT
+2021-07-02 15:04:21,404 INFO werkzeug Thread-102: 127.0.0.1 - - [02/Jul/2021 15:04:21] "[32mGET /staff/delete/7 HTTP/1.1[0m" 302 -
+2021-07-02 15:04:21,409 INFO sqlalchemy.engine.Engine Thread-103: BEGIN (implicit)
+2021-07-02 15:04:21,410 INFO sqlalchemy.engine.Engine Thread-103: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:04:21,410 INFO sqlalchemy.engine.Engine Thread-103: [cached since 453.6s ago] {'pk_1': 2}
+2021-07-02 15:04:21,411 INFO sqlalchemy.engine.Engine Thread-103: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff
+2021-07-02 15:04:21,411 INFO sqlalchemy.engine.Engine Thread-103: [cached since 187.6s ago] {}
+2021-07-02 15:04:21,414 INFO sqlalchemy.engine.Engine Thread-103: SELECT subject_group.id AS subject_group_id, subject_group.name AS subject_group_name 
+FROM subject_group 
+WHERE subject_group.id = %(pk_1)s
+2021-07-02 15:04:21,414 INFO sqlalchemy.engine.Engine Thread-103: [cached since 187.6s ago] {'pk_1': 1}
+2021-07-02 15:04:21,417 INFO sqlalchemy.engine.Engine Thread-103: SELECT subject_group.id AS subject_group_id, subject_group.name AS subject_group_name 
+FROM subject_group 
+WHERE subject_group.id = %(pk_1)s
+2021-07-02 15:04:21,417 INFO sqlalchemy.engine.Engine Thread-103: [cached since 187.6s ago] {'pk_1': 4}
+2021-07-02 15:04:21,419 INFO sqlalchemy.engine.Engine Thread-103: SELECT subject_group.id AS subject_group_id, subject_group.name AS subject_group_name 
+FROM subject_group 
+WHERE subject_group.id = %(pk_1)s
+2021-07-02 15:04:21,419 INFO sqlalchemy.engine.Engine Thread-103: [cached since 187.6s ago] {'pk_1': 3}
+2021-07-02 15:04:21,421 INFO sqlalchemy.engine.Engine Thread-103: ROLLBACK
+2021-07-02 15:04:21,421 INFO werkzeug Thread-103: 127.0.0.1 - - [02/Jul/2021 15:04:21] "GET /staff HTTP/1.1" 200 -
+2021-07-02 15:04:21,461 INFO sqlalchemy.engine.Engine Thread-104: BEGIN (implicit)
+2021-07-02 15:04:21,462 INFO sqlalchemy.engine.Engine Thread-104: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:04:21,463 INFO sqlalchemy.engine.Engine Thread-104: [cached since 453.7s ago] {'pk_1': 2}
+2021-07-02 15:04:21,465 INFO werkzeug Thread-105: 127.0.0.1 - - [02/Jul/2021 15:04:21] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 15:04:21,468 INFO sqlalchemy.engine.Engine Thread-104: ROLLBACK
+2021-07-02 15:04:21,469 INFO werkzeug Thread-104: 127.0.0.1 - - [02/Jul/2021 15:04:21] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 15:04:21,552 INFO werkzeug Thread-106: 127.0.0.1 - - [02/Jul/2021 15:04:21] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 15:04:21,621 INFO sqlalchemy.engine.Engine Thread-107: BEGIN (implicit)
+2021-07-02 15:04:21,622 INFO sqlalchemy.engine.Engine Thread-107: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:04:21,622 INFO sqlalchemy.engine.Engine Thread-107: [cached since 453.8s ago] {'pk_1': 2}
+2021-07-02 15:04:21,623 INFO sqlalchemy.engine.Engine Thread-107: ROLLBACK
+2021-07-02 15:04:21,624 INFO werkzeug Thread-107: 127.0.0.1 - - [02/Jul/2021 15:04:21] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 15:05:07,805 INFO sqlalchemy.engine.Engine Thread-108: BEGIN (implicit)
+2021-07-02 15:05:07,806 INFO sqlalchemy.engine.Engine Thread-108: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:05:07,806 INFO sqlalchemy.engine.Engine Thread-108: [cached since 500s ago] {'pk_1': 2}
+2021-07-02 15:05:07,808 INFO sqlalchemy.engine.Engine Thread-108: SELECT organisation.id AS organisation_id, organisation.name AS organisation_name, organisation.address AS organisation_address, organisation.city AS organisation_city, organisation.post_code AS organisation_post_code, organisation.country AS organisation_country, organisation.url AS organisation_url, organisation.telephone AS organisation_telephone, organisation.email AS organisation_email 
+FROM organisation
+2021-07-02 15:05:07,808 INFO sqlalchemy.engine.Engine Thread-108: [cached since 494s ago] {}
+2021-07-02 15:05:07,810 INFO sqlalchemy.engine.Engine Thread-108: ROLLBACK
+2021-07-02 15:05:07,811 INFO werkzeug Thread-108: 127.0.0.1 - - [02/Jul/2021 15:05:07] "GET /organisation HTTP/1.1" 200 -
+2021-07-02 15:05:07,846 INFO sqlalchemy.engine.Engine Thread-109: BEGIN (implicit)
+2021-07-02 15:05:07,847 INFO sqlalchemy.engine.Engine Thread-109: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:05:07,847 INFO sqlalchemy.engine.Engine Thread-109: [cached since 500.1s ago] {'pk_1': 2}
+2021-07-02 15:05:07,851 INFO sqlalchemy.engine.Engine Thread-109: ROLLBACK
+2021-07-02 15:05:07,855 INFO werkzeug Thread-110: 127.0.0.1 - - [02/Jul/2021 15:05:07] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 15:05:07,856 INFO werkzeug Thread-109: 127.0.0.1 - - [02/Jul/2021 15:05:07] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 15:05:07,930 INFO werkzeug Thread-111: 127.0.0.1 - - [02/Jul/2021 15:05:07] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 15:05:07,963 INFO sqlalchemy.engine.Engine Thread-112: BEGIN (implicit)
+2021-07-02 15:05:07,964 INFO sqlalchemy.engine.Engine Thread-112: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:05:07,965 INFO sqlalchemy.engine.Engine Thread-112: [cached since 500.2s ago] {'pk_1': 2}
+2021-07-02 15:05:07,967 INFO sqlalchemy.engine.Engine Thread-112: ROLLBACK
+2021-07-02 15:05:07,968 INFO werkzeug Thread-112: 127.0.0.1 - - [02/Jul/2021 15:05:07] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 15:05:09,687 INFO sqlalchemy.engine.Engine Thread-113: BEGIN (implicit)
+2021-07-02 15:05:09,688 INFO sqlalchemy.engine.Engine Thread-113: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:05:09,688 INFO sqlalchemy.engine.Engine Thread-113: [cached since 501.9s ago] {'pk_1': 2}
+2021-07-02 15:05:09,692 INFO sqlalchemy.engine.Engine Thread-113: ROLLBACK
+2021-07-02 15:05:09,693 INFO werkzeug Thread-113: 127.0.0.1 - - [02/Jul/2021 15:05:09] "GET /organisation/add HTTP/1.1" 200 -
+2021-07-02 15:05:09,727 INFO sqlalchemy.engine.Engine Thread-114: BEGIN (implicit)
+2021-07-02 15:05:09,728 INFO sqlalchemy.engine.Engine Thread-114: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:05:09,731 INFO sqlalchemy.engine.Engine Thread-114: [cached since 502s ago] {'pk_1': 2}
+2021-07-02 15:05:09,733 INFO werkzeug Thread-115: 127.0.0.1 - - [02/Jul/2021 15:05:09] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 15:05:09,736 INFO sqlalchemy.engine.Engine Thread-114: ROLLBACK
+2021-07-02 15:05:09,737 INFO werkzeug Thread-114: 127.0.0.1 - - [02/Jul/2021 15:05:09] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 15:05:09,778 INFO werkzeug Thread-116: 127.0.0.1 - - [02/Jul/2021 15:05:09] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 15:05:09,807 INFO sqlalchemy.engine.Engine Thread-117: BEGIN (implicit)
+2021-07-02 15:05:09,807 INFO sqlalchemy.engine.Engine Thread-117: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:05:09,807 INFO sqlalchemy.engine.Engine Thread-117: [cached since 502s ago] {'pk_1': 2}
+2021-07-02 15:05:09,809 INFO sqlalchemy.engine.Engine Thread-117: ROLLBACK
+2021-07-02 15:05:09,809 INFO werkzeug Thread-117: 127.0.0.1 - - [02/Jul/2021 15:05:09] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 15:06:33,199 INFO werkzeug MainThread:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-02 15:06:34,937 INFO sqlalchemy.engine.Engine Thread-1: SHOW VARIABLES LIKE 'sql_mode'
+2021-07-02 15:06:34,938 INFO sqlalchemy.engine.Engine Thread-1: [raw sql] {}
+2021-07-02 15:06:34,942 INFO sqlalchemy.engine.Engine Thread-1: SHOW VARIABLES LIKE 'lower_case_table_names'
+2021-07-02 15:06:34,942 INFO sqlalchemy.engine.Engine Thread-1: [generated in 0.00048s] {}
+2021-07-02 15:06:34,946 INFO sqlalchemy.engine.Engine Thread-1: SELECT DATABASE()
+2021-07-02 15:06:34,946 INFO sqlalchemy.engine.Engine Thread-1: [raw sql] {}
+2021-07-02 15:06:34,947 INFO sqlalchemy.engine.Engine Thread-1: BEGIN (implicit)
+2021-07-02 15:06:34,949 INFO sqlalchemy.engine.Engine Thread-1: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:06:34,949 INFO sqlalchemy.engine.Engine Thread-1: [generated in 0.00035s] {'pk_1': 2}
+2021-07-02 15:06:34,950 ERROR app Thread-1: Exception on /organisation/add [GET]
+Traceback (most recent call last):
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/notis/PycharmProjects/students_app/app/admin/views/organisation.py", line 22, in add_organisation
+    form = OrganisationForms()
+NameError: name 'OrganisationForms' is not defined
+2021-07-02 15:06:34,980 INFO sqlalchemy.engine.Engine Thread-1: ROLLBACK
+2021-07-02 15:06:34,981 INFO werkzeug Thread-1: 127.0.0.1 - - [02/Jul/2021 15:06:34] "[35m[1mGET /organisation/add HTTP/1.1[0m" 500 -
+2021-07-02 15:06:35,013 INFO sqlalchemy.engine.Engine Thread-2: BEGIN (implicit)
+2021-07-02 15:06:35,014 INFO sqlalchemy.engine.Engine Thread-2: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:06:35,015 INFO sqlalchemy.engine.Engine Thread-2: [cached since 0.06587s ago] {'pk_1': 2}
+2021-07-02 15:06:35,015 INFO werkzeug Thread-3: 127.0.0.1 - - [02/Jul/2021 15:06:35] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 15:06:35,017 INFO sqlalchemy.engine.Engine Thread-2: ROLLBACK
+2021-07-02 15:06:35,017 INFO werkzeug Thread-2: 127.0.0.1 - - [02/Jul/2021 15:06:35] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 15:06:35,085 INFO werkzeug Thread-4: 127.0.0.1 - - [02/Jul/2021 15:06:35] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 15:06:35,163 INFO sqlalchemy.engine.Engine Thread-5: BEGIN (implicit)
+2021-07-02 15:06:35,165 INFO sqlalchemy.engine.Engine Thread-5: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:06:35,166 INFO sqlalchemy.engine.Engine Thread-5: [cached since 0.217s ago] {'pk_1': 2}
+2021-07-02 15:06:35,172 INFO sqlalchemy.engine.Engine Thread-5: ROLLBACK
+2021-07-02 15:06:35,177 INFO werkzeug Thread-5: 127.0.0.1 - - [02/Jul/2021 15:06:35] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 15:06:36,969 INFO sqlalchemy.engine.Engine Thread-6: BEGIN (implicit)
+2021-07-02 15:06:36,970 INFO sqlalchemy.engine.Engine Thread-6: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:06:36,970 INFO sqlalchemy.engine.Engine Thread-6: [cached since 2.022s ago] {'pk_1': 2}
+2021-07-02 15:06:36,974 INFO sqlalchemy.engine.Engine Thread-6: SELECT organisation.id AS organisation_id, organisation.name AS organisation_name, organisation.address AS organisation_address, organisation.city AS organisation_city, organisation.post_code AS organisation_post_code, organisation.country AS organisation_country, organisation.url AS organisation_url, organisation.telephone AS organisation_telephone, organisation.email AS organisation_email 
+FROM organisation
+2021-07-02 15:06:36,974 INFO sqlalchemy.engine.Engine Thread-6: [generated in 0.00039s] {}
+2021-07-02 15:06:36,980 INFO sqlalchemy.engine.Engine Thread-6: ROLLBACK
+2021-07-02 15:06:36,981 INFO werkzeug Thread-6: 127.0.0.1 - - [02/Jul/2021 15:06:36] "GET /organisation HTTP/1.1" 200 -
+2021-07-02 15:06:37,015 INFO sqlalchemy.engine.Engine Thread-7: BEGIN (implicit)
+2021-07-02 15:06:37,016 INFO sqlalchemy.engine.Engine Thread-7: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:06:37,018 INFO sqlalchemy.engine.Engine Thread-7: [cached since 2.069s ago] {'pk_1': 2}
+2021-07-02 15:06:37,023 INFO sqlalchemy.engine.Engine Thread-7: ROLLBACK
+2021-07-02 15:06:37,026 INFO werkzeug Thread-8: 127.0.0.1 - - [02/Jul/2021 15:06:37] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 15:06:37,026 INFO werkzeug Thread-7: 127.0.0.1 - - [02/Jul/2021 15:06:37] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 15:06:37,060 INFO werkzeug Thread-9: 127.0.0.1 - - [02/Jul/2021 15:06:37] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 15:06:37,087 INFO sqlalchemy.engine.Engine Thread-10: BEGIN (implicit)
+2021-07-02 15:06:37,087 INFO sqlalchemy.engine.Engine Thread-10: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:06:37,087 INFO sqlalchemy.engine.Engine Thread-10: [cached since 2.138s ago] {'pk_1': 2}
+2021-07-02 15:06:37,089 INFO sqlalchemy.engine.Engine Thread-10: ROLLBACK
+2021-07-02 15:06:37,090 INFO werkzeug Thread-10: 127.0.0.1 - - [02/Jul/2021 15:06:37] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 15:06:38,143 INFO sqlalchemy.engine.Engine Thread-11: BEGIN (implicit)
+2021-07-02 15:06:38,144 INFO sqlalchemy.engine.Engine Thread-11: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:06:38,144 INFO sqlalchemy.engine.Engine Thread-11: [cached since 3.196s ago] {'pk_1': 2}
+2021-07-02 15:06:38,146 ERROR app Thread-11: Exception on /organisation/add [GET]
+Traceback (most recent call last):
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/notis/PycharmProjects/students_app/app/admin/views/organisation.py", line 22, in add_organisation
+    form = OrganisationForms()
+NameError: name 'OrganisationForms' is not defined
+2021-07-02 15:06:38,147 INFO sqlalchemy.engine.Engine Thread-11: ROLLBACK
+2021-07-02 15:06:38,147 INFO werkzeug Thread-11: 127.0.0.1 - - [02/Jul/2021 15:06:38] "[35m[1mGET /organisation/add HTTP/1.1[0m" 500 -
+2021-07-02 15:06:38,182 INFO sqlalchemy.engine.Engine Thread-12: BEGIN (implicit)
+2021-07-02 15:06:38,187 INFO sqlalchemy.engine.Engine Thread-12: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:06:38,187 INFO sqlalchemy.engine.Engine Thread-12: [cached since 3.239s ago] {'pk_1': 2}
+2021-07-02 15:06:38,191 INFO sqlalchemy.engine.Engine Thread-12: ROLLBACK
+2021-07-02 15:06:38,194 INFO werkzeug Thread-12: 127.0.0.1 - - [02/Jul/2021 15:06:38] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 15:06:38,195 INFO werkzeug Thread-13: 127.0.0.1 - - [02/Jul/2021 15:06:38] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 15:06:38,233 INFO werkzeug Thread-14: 127.0.0.1 - - [02/Jul/2021 15:06:38] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 15:06:38,261 INFO sqlalchemy.engine.Engine Thread-15: BEGIN (implicit)
+2021-07-02 15:06:38,262 INFO sqlalchemy.engine.Engine Thread-15: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:06:38,262 INFO sqlalchemy.engine.Engine Thread-15: [cached since 3.313s ago] {'pk_1': 2}
+2021-07-02 15:06:38,264 INFO sqlalchemy.engine.Engine Thread-15: ROLLBACK
+2021-07-02 15:06:38,265 INFO werkzeug Thread-15: 127.0.0.1 - - [02/Jul/2021 15:06:38] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 15:06:50,076 INFO werkzeug MainThread:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-02 15:06:51,126 INFO sqlalchemy.engine.Engine Thread-1: SHOW VARIABLES LIKE 'sql_mode'
+2021-07-02 15:06:51,127 INFO sqlalchemy.engine.Engine Thread-1: [raw sql] {}
+2021-07-02 15:06:51,130 INFO sqlalchemy.engine.Engine Thread-1: SHOW VARIABLES LIKE 'lower_case_table_names'
+2021-07-02 15:06:51,130 INFO sqlalchemy.engine.Engine Thread-1: [generated in 0.00032s] {}
+2021-07-02 15:06:51,132 INFO sqlalchemy.engine.Engine Thread-1: SELECT DATABASE()
+2021-07-02 15:06:51,132 INFO sqlalchemy.engine.Engine Thread-1: [raw sql] {}
+2021-07-02 15:06:51,134 INFO sqlalchemy.engine.Engine Thread-1: BEGIN (implicit)
+2021-07-02 15:06:51,138 INFO sqlalchemy.engine.Engine Thread-1: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:06:51,138 INFO sqlalchemy.engine.Engine Thread-1: [generated in 0.00038s] {'pk_1': 2}
+2021-07-02 15:06:51,245 INFO sqlalchemy.engine.Engine Thread-1: ROLLBACK
+2021-07-02 15:06:51,246 INFO werkzeug Thread-1: 127.0.0.1 - - [02/Jul/2021 15:06:51] "GET /organisation/add HTTP/1.1" 200 -
+2021-07-02 15:06:51,296 INFO sqlalchemy.engine.Engine Thread-2: BEGIN (implicit)
+2021-07-02 15:06:51,307 INFO sqlalchemy.engine.Engine Thread-2: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:06:51,313 INFO sqlalchemy.engine.Engine Thread-2: [cached since 0.1752s ago] {'pk_1': 2}
+2021-07-02 15:06:51,312 INFO werkzeug Thread-3: 127.0.0.1 - - [02/Jul/2021 15:06:51] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 15:06:51,331 INFO sqlalchemy.engine.Engine Thread-2: ROLLBACK
+2021-07-02 15:06:51,332 INFO werkzeug Thread-2: 127.0.0.1 - - [02/Jul/2021 15:06:51] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 15:06:51,401 INFO werkzeug Thread-4: 127.0.0.1 - - [02/Jul/2021 15:06:51] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 15:06:51,448 INFO sqlalchemy.engine.Engine Thread-5: BEGIN (implicit)
+2021-07-02 15:06:51,449 INFO sqlalchemy.engine.Engine Thread-5: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:06:51,450 INFO sqlalchemy.engine.Engine Thread-5: [cached since 0.3123s ago] {'pk_1': 2}
+2021-07-02 15:06:51,457 INFO sqlalchemy.engine.Engine Thread-5: ROLLBACK
+2021-07-02 15:06:51,459 INFO werkzeug Thread-5: 127.0.0.1 - - [02/Jul/2021 15:06:51] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 15:09:24,059 INFO werkzeug MainThread:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-02 15:09:25,469 INFO sqlalchemy.engine.Engine Thread-1: SHOW VARIABLES LIKE 'sql_mode'
+2021-07-02 15:09:25,469 INFO sqlalchemy.engine.Engine Thread-1: [raw sql] {}
+2021-07-02 15:09:25,473 INFO sqlalchemy.engine.Engine Thread-1: SHOW VARIABLES LIKE 'lower_case_table_names'
+2021-07-02 15:09:25,474 INFO sqlalchemy.engine.Engine Thread-1: [generated in 0.00096s] {}
+2021-07-02 15:09:25,477 INFO sqlalchemy.engine.Engine Thread-1: SELECT DATABASE()
+2021-07-02 15:09:25,477 INFO sqlalchemy.engine.Engine Thread-1: [raw sql] {}
+2021-07-02 15:09:25,478 INFO sqlalchemy.engine.Engine Thread-1: BEGIN (implicit)
+2021-07-02 15:09:25,483 INFO sqlalchemy.engine.Engine Thread-1: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:09:25,483 INFO sqlalchemy.engine.Engine Thread-1: [generated in 0.00039s] {'pk_1': 2}
+2021-07-02 15:09:25,488 INFO sqlalchemy.engine.Engine Thread-1: SELECT organisation.id AS organisation_id, organisation.name AS organisation_name, organisation.address AS organisation_address, organisation.city AS organisation_city, organisation.post_code AS organisation_post_code, organisation.country AS organisation_country, organisation.url AS organisation_url, organisation.telephone AS organisation_telephone, organisation.email AS organisation_email 
+FROM organisation
+2021-07-02 15:09:25,488 INFO sqlalchemy.engine.Engine Thread-1: [generated in 0.00058s] {}
+2021-07-02 15:09:25,519 INFO sqlalchemy.engine.Engine Thread-1: ROLLBACK
+2021-07-02 15:09:25,520 INFO werkzeug Thread-1: 127.0.0.1 - - [02/Jul/2021 15:09:25] "GET /organisation HTTP/1.1" 200 -
+2021-07-02 15:09:25,548 INFO sqlalchemy.engine.Engine Thread-2: BEGIN (implicit)
+2021-07-02 15:09:25,548 INFO sqlalchemy.engine.Engine Thread-2: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:09:25,548 INFO sqlalchemy.engine.Engine Thread-2: [cached since 0.0659s ago] {'pk_1': 2}
+2021-07-02 15:09:25,555 INFO sqlalchemy.engine.Engine Thread-2: ROLLBACK
+2021-07-02 15:09:25,557 INFO werkzeug Thread-2: 127.0.0.1 - - [02/Jul/2021 15:09:25] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 15:09:25,558 INFO werkzeug Thread-3: 127.0.0.1 - - [02/Jul/2021 15:09:25] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 15:09:25,623 INFO werkzeug Thread-4: 127.0.0.1 - - [02/Jul/2021 15:09:25] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 15:09:25,658 INFO sqlalchemy.engine.Engine Thread-5: BEGIN (implicit)
+2021-07-02 15:09:25,658 INFO sqlalchemy.engine.Engine Thread-5: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:09:25,659 INFO sqlalchemy.engine.Engine Thread-5: [cached since 0.1763s ago] {'pk_1': 2}
+2021-07-02 15:09:25,661 INFO sqlalchemy.engine.Engine Thread-5: ROLLBACK
+2021-07-02 15:09:25,662 INFO werkzeug Thread-5: 127.0.0.1 - - [02/Jul/2021 15:09:25] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 15:09:26,142 INFO sqlalchemy.engine.Engine Thread-6: BEGIN (implicit)
+2021-07-02 15:09:26,142 INFO sqlalchemy.engine.Engine Thread-6: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:09:26,142 INFO sqlalchemy.engine.Engine Thread-6: [cached since 0.66s ago] {'pk_1': 2}
+2021-07-02 15:09:26,227 INFO sqlalchemy.engine.Engine Thread-6: ROLLBACK
+2021-07-02 15:09:26,228 INFO werkzeug Thread-6: 127.0.0.1 - - [02/Jul/2021 15:09:26] "GET /organisation/add HTTP/1.1" 200 -
+2021-07-02 15:09:26,269 INFO sqlalchemy.engine.Engine Thread-7: BEGIN (implicit)
+2021-07-02 15:09:26,271 INFO sqlalchemy.engine.Engine Thread-7: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:09:26,271 INFO sqlalchemy.engine.Engine Thread-7: [cached since 0.7886s ago] {'pk_1': 2}
+2021-07-02 15:09:26,274 INFO sqlalchemy.engine.Engine Thread-7: ROLLBACK
+2021-07-02 15:09:26,278 INFO werkzeug Thread-7: 127.0.0.1 - - [02/Jul/2021 15:09:26] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 15:09:26,280 INFO werkzeug Thread-8: 127.0.0.1 - - [02/Jul/2021 15:09:26] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 15:09:26,318 INFO werkzeug Thread-9: 127.0.0.1 - - [02/Jul/2021 15:09:26] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 15:09:26,353 INFO sqlalchemy.engine.Engine Thread-10: BEGIN (implicit)
+2021-07-02 15:09:26,354 INFO sqlalchemy.engine.Engine Thread-10: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:09:26,354 INFO sqlalchemy.engine.Engine Thread-10: [cached since 0.8716s ago] {'pk_1': 2}
+2021-07-02 15:09:26,356 INFO sqlalchemy.engine.Engine Thread-10: ROLLBACK
+2021-07-02 15:09:26,356 INFO werkzeug Thread-10: 127.0.0.1 - - [02/Jul/2021 15:09:26] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 15:09:37,775 INFO sqlalchemy.engine.Engine Thread-11: BEGIN (implicit)
+2021-07-02 15:09:37,776 INFO sqlalchemy.engine.Engine Thread-11: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:09:37,776 INFO sqlalchemy.engine.Engine Thread-11: [cached since 12.29s ago] {'pk_1': 2}
+2021-07-02 15:09:37,786 ERROR app Thread-11: Exception on /organisation/add [POST]
+Traceback (most recent call last):
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/notis/PycharmProjects/students_app/app/admin/views/organisation.py", line 24, in add_organisation
+    organisation = Organisation(
+  File "<string>", line 4, in __init__
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/sqlalchemy/orm/state.py", line 480, in _initialize_instance
+    manager.dispatch.init_failure(self, args, kwargs)
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/sqlalchemy/orm/state.py", line 477, in _initialize_instance
+    return manager.original_init(*mixed[1:], **kwargs)
+  File "/home/notis/anaconda3/envs/students_app/lib/python3.8/site-packages/sqlalchemy/orm/decl_base.py", line 1142, in _declarative_constructor
+    raise TypeError(
+TypeError: 'submit' is an invalid keyword argument for Organisation
+2021-07-02 15:09:37,789 INFO sqlalchemy.engine.Engine Thread-11: ROLLBACK
+2021-07-02 15:09:37,789 INFO werkzeug Thread-11: 127.0.0.1 - - [02/Jul/2021 15:09:37] "[35m[1mPOST /organisation/add HTTP/1.1[0m" 500 -
+2021-07-02 15:09:37,819 INFO sqlalchemy.engine.Engine Thread-12: BEGIN (implicit)
+2021-07-02 15:09:37,820 INFO sqlalchemy.engine.Engine Thread-12: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:09:37,821 INFO sqlalchemy.engine.Engine Thread-12: [cached since 12.34s ago] {'pk_1': 2}
+2021-07-02 15:09:37,823 INFO werkzeug Thread-13: 127.0.0.1 - - [02/Jul/2021 15:09:37] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 15:09:37,825 INFO sqlalchemy.engine.Engine Thread-12: ROLLBACK
+2021-07-02 15:09:37,826 INFO werkzeug Thread-12: 127.0.0.1 - - [02/Jul/2021 15:09:37] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 15:09:37,892 INFO werkzeug Thread-14: 127.0.0.1 - - [02/Jul/2021 15:09:37] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -
+2021-07-02 15:09:37,924 INFO sqlalchemy.engine.Engine Thread-15: BEGIN (implicit)
+2021-07-02 15:09:37,925 INFO sqlalchemy.engine.Engine Thread-15: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:09:37,925 INFO sqlalchemy.engine.Engine Thread-15: [cached since 12.44s ago] {'pk_1': 2}
+2021-07-02 15:09:37,927 INFO sqlalchemy.engine.Engine Thread-15: ROLLBACK
+2021-07-02 15:09:37,928 INFO werkzeug Thread-15: 127.0.0.1 - - [02/Jul/2021 15:09:37] "[33mGET /static/images/logo.png HTTP/1.1[0m" 404 -
+2021-07-02 15:20:31,669 INFO werkzeug MainThread:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-02 15:20:35,290 INFO sqlalchemy.engine.Engine Thread-1: SHOW VARIABLES LIKE 'sql_mode'
+2021-07-02 15:20:35,290 INFO sqlalchemy.engine.Engine Thread-1: [raw sql] {}
+2021-07-02 15:20:35,294 INFO sqlalchemy.engine.Engine Thread-1: SHOW VARIABLES LIKE 'lower_case_table_names'
+2021-07-02 15:20:35,294 INFO sqlalchemy.engine.Engine Thread-1: [generated in 0.00047s] {}
+2021-07-02 15:20:35,297 INFO sqlalchemy.engine.Engine Thread-1: SELECT DATABASE()
+2021-07-02 15:20:35,297 INFO sqlalchemy.engine.Engine Thread-1: [raw sql] {}
+2021-07-02 15:20:35,298 INFO sqlalchemy.engine.Engine Thread-1: BEGIN (implicit)
+2021-07-02 15:20:35,300 INFO sqlalchemy.engine.Engine Thread-1: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:20:35,300 INFO sqlalchemy.engine.Engine Thread-1: [generated in 0.00026s] {'pk_1': 2}
+2021-07-02 15:20:35,312 INFO sqlalchemy.engine.Engine Thread-1: INSERT INTO organisation (name, address, city, post_code, country, url, telephone, email) VALUES (%(name)s, %(address)s, %(city)s, %(post_code)s, %(country)s, %(url)s, %(telephone)s, %(email)s)
+2021-07-02 15:20:35,312 INFO sqlalchemy.engine.Engine Thread-1: [generated in 0.00047s] {'name': 'fdsa', 'address': 'dsa', 'city': 'dsa', 'post_code': 'dsa', 'country': 'dsa', 'url': 'dsad', 'telephone': '1224', 'email': 'notis@nasd.com'}
+2021-07-02 15:20:35,313 INFO sqlalchemy.engine.Engine Thread-1: COMMIT
+2021-07-02 15:20:35,323 INFO werkzeug Thread-1: 127.0.0.1 - - [02/Jul/2021 15:20:35] "[32mPOST /organisation/add HTTP/1.1[0m" 302 -
+2021-07-02 15:20:35,329 INFO sqlalchemy.engine.Engine Thread-2: BEGIN (implicit)
+2021-07-02 15:20:35,330 INFO sqlalchemy.engine.Engine Thread-2: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:20:35,330 INFO sqlalchemy.engine.Engine Thread-2: [cached since 0.03018s ago] {'pk_1': 2}
+2021-07-02 15:20:35,332 INFO sqlalchemy.engine.Engine Thread-2: SELECT organisation.id AS organisation_id, organisation.name AS organisation_name, organisation.address AS organisation_address, organisation.city AS organisation_city, organisation.post_code AS organisation_post_code, organisation.country AS organisation_country, organisation.url AS organisation_url, organisation.telephone AS organisation_telephone, organisation.email AS organisation_email 
+FROM organisation
+2021-07-02 15:20:35,332 INFO sqlalchemy.engine.Engine Thread-2: [generated in 0.00026s] {}
+2021-07-02 15:20:35,366 INFO sqlalchemy.engine.Engine Thread-2: ROLLBACK
+2021-07-02 15:20:35,367 INFO werkzeug Thread-2: 127.0.0.1 - - [02/Jul/2021 15:20:35] "GET /organisation HTTP/1.1" 200 -
+2021-07-02 15:20:35,404 INFO sqlalchemy.engine.Engine Thread-3: BEGIN (implicit)
+2021-07-02 15:20:35,405 INFO sqlalchemy.engine.Engine Thread-3: SELECT staff.id AS staff_id, staff.email AS staff_email, staff.first_name AS staff_first_name, staff.last_name AS staff_last_name, staff.password_hash AS staff_password_hash, staff.subject_group_id AS staff_subject_group_id 
+FROM staff 
+WHERE staff.id = %(pk_1)s
+2021-07-02 15:20:35,405 INFO sqlalchemy.engine.Engine Thread-3: [cached since 0.1053s ago] {'pk_1': 2}
+2021-07-02 15:20:35,413 INFO werkzeug Thread-4: 127.0.0.1 - - [02/Jul/2021 15:20:35] "[36mGET /static/images/sm_logo.png HTTP/1.1[0m" 304 -
+2021-07-02 15:20:35,412 INFO sqlalchemy.engine.Engine Thread-3: ROLLBACK
+2021-07-02 15:20:35,416 INFO werkzeug Thread-3: 127.0.0.1 - - [02/Jul/2021 15:20:35] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2021-07-02 15:20:35,485 INFO werkzeug Thread-5: 127.0.0.1 - - [02/Jul/2021 15:20:35] "[36mGET /static/scripts/script.js HTTP/1.1[0m" 304 -

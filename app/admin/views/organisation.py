@@ -19,7 +19,7 @@ def list_organisation():
 @admin.route('/organisation/add', methods=['GET', 'POST'])
 @login_required
 def add_organisation():
-    form = OrganisationForms()
+    form = OrganisationForm()
     if form.validate_on_submit():
         organisation = Organisation(
             name=form.name.data,
@@ -30,7 +30,6 @@ def add_organisation():
             url=form.url.data,
             telephone=form.telephone.data,
             email=form.email.data,
-            submit=form.submit.data,
         )
         try:
             db.session.add(organisation)
