@@ -8,6 +8,7 @@ from flask_login import login_required
 
 
 @admin.route('/organisation', methods=['GET'])
+@login_required
 def list_organisation():
     organisation = Organisation.query.all()
     return render_template('admin/organisation.html',
@@ -16,8 +17,9 @@ def list_organisation():
 
 
 @admin.route('/organisation/add', methods=['GET', 'POST'])
+@login_required
 def add_organisation():
-    form = Organisation()
+    form = OrganisationForms()
     if form.validate_on_submit():
         organisation = Organisation(
             name=form.name.data,
@@ -50,12 +52,12 @@ def add_organisation():
 
 
 @admin.route('/organisation/delete/<int:id>', methods=['GET', 'POST'])
+@login_required
 def delete_organisation(id):
     organisation = Organisation.query.get_or_404(id)
     db.session.delete(organisation)
-
     try:
-        db.session.comit()
+        db.session.commit()
     except SQLAlchemyError as e:
         db.session.rollback()
         error = str(e.__dict__['orig'])
@@ -69,6 +71,7 @@ def delete_organisation(id):
 
 
 @admin.route('/organisation/edit/<int:id>', methods=['GET', 'POST'])
+@login_required
 def edit_organisation(id):
     organisation = Organisation.query.get_or_404(id)
     form = OrganisationForms(obj=organisation)

@@ -2,7 +2,7 @@ import logging
 
 
 class Config(object):
-    DEBUG = True
+    DEBUG = False
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 
