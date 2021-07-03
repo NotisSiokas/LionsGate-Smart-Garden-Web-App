@@ -9,4 +9,5 @@ from .views.organisation import *
 from .views.signup import *
 from .views.project import *
 from .views.site import *
+from .views.node import *
 

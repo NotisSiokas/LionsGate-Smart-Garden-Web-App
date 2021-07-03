@@ -8,12 +8,11 @@
                 <table class="table table-striped table-bordered fixed-header">
                   <thead>
                     <tr>
-                      <th> Project </th>
-                      <th> Name of Site </th>
-                      <th> Description of Site </th>
-                      <th> Location of Polygon </th>
-                      <th> Centroid Latitude </th>
-                      <th> Centroid Longitude </th>
+                      <th> Site </th>
+                      <th> Name of Node </th>
+                      <th> Latitude of Node </th>
+                      <th> Longitude of Node </th>
+                      <th> Node Description  </th>
                       <th> Sample Period </th>
                       <th> Average Period</th>
                     </tr>
@@ -21,19 +20,18 @@
                   <tbody>
                   {% for row in rowdata %}
                     <tr>
-                      <td> {{ row.project_id }} </td>
+                      <td> {{ row.site_id }} </td>
                       <td> {{ row.name }} </td>
+                      <td> {{ row.latidute }} </td>
+                      <td> {{ row.longitude }} </td>
                       <td> {{ row.description }} </td>
-                      <td> {{ row.location_polygon }} </td>
-                      <td> {{ row.centroid_latitude }} </td>
-                      <td> {{ row.centroid_longitude }} </td>
                       <td> {{ row.sample_period }} </td>
                       <td> {{ row.average_period }} </td>
                       <td>
-                          <a title="Edit" href="{{ url_for('admin.edit_site', id=row.id) }}">
+                          <a title="Edit" href="{{ url_for('admin.edit_node', id=row.id) }}">
                               <i class="bi-pencil"></i>
                           </a>
-                          <a title="Delete" href="{{ url_for('admin.delete_site', id=row.id) }}">
+                          <a title="Delete" href="{{ url_for('admin.delete_node', id=row.id) }}">
                               <i class="bi-trash"></i>
                           </a>
                       </td>
@@ -48,7 +46,7 @@
               </div>
             {% endif %}
                     <div>
-                      <a class="btn btn-primary" href="{{ url_for('admin.add_site') }}">New</a>
+                      <a class="btn btn-primary" href="{{ url_for('admin.add_node') }}">New</a>
                     </div>
         </div>
     </div>

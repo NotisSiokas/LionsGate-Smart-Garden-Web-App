@@ -23,7 +23,7 @@ def add_site():
     form = SiteForm()
     if form.validate_on_submit():
         site = Site(
-            project_id=form.project_id.data,
+            project_id=form.project_id.data.id,
             name=form.name.data,
             description=form.description.data,
             location_polygon=form.location_polygon.data,

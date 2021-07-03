@@ -95,4 +95,5 @@ def edit_staff(id):
 
     return render_template('form_page.html',
                            form=form,
+                           staff=staff,
                            title='Edit staff')
