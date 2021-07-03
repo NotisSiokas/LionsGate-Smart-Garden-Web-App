@@ -8,7 +8,7 @@ from app.admin.forms.staff import *
 
 
 @admin.route('/staff', methods=['GET'])
-@login_required
+
 def list_staff():
     staff = Staff.query.all()
     return render_template('admin/staff.html',
@@ -17,7 +17,7 @@ def list_staff():
 
 
 @admin.route('/staff/add', methods=['GET', 'POST'])
-@login_required
+
 def add_staff():
     form = StaffForm()
     if form.validate_on_submit():

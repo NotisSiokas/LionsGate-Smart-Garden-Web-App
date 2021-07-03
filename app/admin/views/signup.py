@@ -1,9 +1,7 @@
 from flask import render_template, url_for, redirect, flash
 from sqlalchemy.exc import SQLAlchemyError
-
 from app.admin import admin
 from app import db
-from app.admin.forms.staff import Staff
 from app.admin.forms.staff import *
 
 
