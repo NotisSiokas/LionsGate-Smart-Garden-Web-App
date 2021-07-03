@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="d-flex justify-content-center">
+        <div class="flex-column">
+            <h1>{{ title }}</h1>
+            {% if rowdata %}
+                <div>
+                <table class="table table-striped table-bordered fixed-header">
+                  <thead>
+                    <tr>
+                      <th> Manufacturer </th>
+                      <th> Url </th>
+                      <th> Model </th>
+                      <th> Datasheet </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% for row in rowdata %}
+                    <tr>
+                      <td> {{ row.manufacturer }} </td>
+                      <td> {{ row.url }} </td>
+                      <td> {{ row.model }} </td>
+                      <td> {{ row.datasheet }} </td>
+                      <td>
+                          <a title="Edit" href="{{ url_for('admin.edit_sensor_type', id=row.id) }}">
+                              <i class="bi-pencil"></i>
+                          </a>
+                          <a title="Delete" href="{{ url_for('admin.delete_sensor_type', id=row.id) }}">
+                              <i class="bi-trash"></i>
+                          </a>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            {% else %}
+              <div>
+                <h3> No data found. </h3>
+              </div>
+            {% endif %}
+                    <div>
+                      <a class="btn btn-primary" href="{{ url_for('admin.add_sensor_type') }}">New</a>
+                    </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+

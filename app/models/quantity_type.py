@@ -1,7 +1,7 @@
 from app import db
 
 
-class QuantityType(db.Model):
+class Quantity_Type(db.Model):
     __tablename__ = 'quantity_type'
 
     id = db.Column(db.Integer, primary_key=True, nullable=False)

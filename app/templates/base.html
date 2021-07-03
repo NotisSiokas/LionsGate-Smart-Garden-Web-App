@@ -76,8 +76,23 @@
                                   <a class="dropdown-item" href="{{ url_for('admin.list_node') }}">
                                 Node
                                 </a>
-
-
+                                </a>
+                                  <a class="dropdown-item" href="{{ url_for('admin.list_sensor') }}">
+                                Sensor
+                                </a>
+                                </a>
+                                <a class="dropdown-item" href="{{ url_for('admin.list_sensor_type') }}">
+                                Sensor Type
+                                </a>
+                                <a class="dropdown-item" href="{{ url_for('admin.list_data') }}">
+                                Data
+                                </a>
+                                <a class="dropdown-item" href="{{ url_for('admin.list_quantity') }}">
+                                Quantity
+                                </a>
+                                <a class="dropdown-item" href="{{ url_for('admin.list_quantity_type') }}">
+                                Quantity
+                                </a>
                             </div>
                         </li>
                             <li class="nav-link"><a href="{{ url_for('auth.password') }}">Change password</a></li>

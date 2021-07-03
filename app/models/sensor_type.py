@@ -1,7 +1,7 @@
 from app import db
 
 
-class SensorType(db.Model):
+class Sensor_Type(db.Model):
     __tablename__ = 'sensor_type'
 
     id = db.Column(db.Integer, primary_key=True, nullable=False)
