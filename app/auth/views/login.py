@@ -27,19 +27,7 @@ def login():
 
 
 
-@auth.route('/signup', methods=['GET', 'POST'])
-def signup():
-    form = SignUpForm()
-    if form.validate_on_submit():
 
-        user = Staff.query.filter_by(email=form.email.data).first()
-        if user is not None and user.verify_password(form.password.data):
-            login_user(user)
-            return redirect(url_for('public.index'))
-        else:
-            flash('Invalid email or password.')
-
-    return render_template('form_page.html', form=form, title='Sign Up')
 
 
 @auth.route('/password', methods=['GET', 'POST'])

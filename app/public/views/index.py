@@ -6,4 +6,4 @@ from app.public import public
 def index():
     return render_template('index.html',
                            title="Welcome",
-                           content="Welcome to the Lion's Gate SmartGarden Web-App")
+                           content="Welcome to the Common Sense Cloud")

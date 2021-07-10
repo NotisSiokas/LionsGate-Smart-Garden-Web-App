@@ -15,3 +15,4 @@ from .views.sensor_type import *
 from .views.data import *
 from .views.quantity import *
 from .views.quantity_type import *
+from .views.users import *
