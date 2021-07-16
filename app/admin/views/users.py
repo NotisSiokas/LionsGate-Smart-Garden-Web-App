@@ -16,6 +16,7 @@ def list_users():
 
 
 @admin.route('/user/add', methods=['GET', 'POST'])
+
 def add_users():
     form = UsersForm()
     if form.validate_on_submit():
@@ -25,7 +26,7 @@ def add_users():
             last_name=form.last_name.data,
             email=form.email.data,
             telephone=form.telephone.data,
-            password_hash=form.password.data,
+            password=form.password.data,
         )
         try:
             db.session.add(users)

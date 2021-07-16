@@ -6,7 +6,7 @@ from sqlalchemy.testing import db
 from app.admin.forms.signup import SignUpForm
 from app.auth import auth
 from app.auth.forms.login import *
-from app.models import Staff
+from app.models import Users
 from app import db
 from app.auth.forms.password import PasswordForm
 
@@ -16,7 +16,7 @@ def login():
     form = LoginForm()
     if form.validate_on_submit():
 
-        user = Staff.query.filter_by(email=form.email.data).first()
+        user = Users.query.filter_by(email=form.email.data).first()
         if user is not None and user.verify_password(form.password.data):
             login_user(user)
             return redirect(url_for('public.index'))

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="cbd77476-b7dc-4ecc-b07d-0e4c87b07080" name="soc-web-liv-40.napier.ac.uk" url="https://soc-web-liv-40.napier.ac.uk">
+        <fileTransfer rootFolder="/usr/local/env/csense" accessType="SFTP" host="soc-web-liv-40.napier.ac.uk" port="22" sshConfigId="0ac30741-eaa2-4bcf-a534-450dd28e90d3" sshConfig="40504369@soc-web-liv-40.napier.ac.uk:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -5,5 +5,5 @@ from app.public import public
 @public.route('/')
 def index():
     return render_template('index.html',
-                           title="Welcome",
-                           content="Welcome to the Common Sense Cloud")
+                           title="Homepage",
+                           content="Welcome to the CommonSense Cloud")
